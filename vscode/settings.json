@@ -1,7 +1,8 @@
 {
     "files.autoSave": "onFocusChange",
-
+    
     "editor.fontSize": 12,
+    "editor.insertSpaces": false,
     "editor.renderWhitespace": "boundary",
     "editor.minimap.enabled": false,
     "editor.scrollBeyondLastLine": false,
@@ -11,6 +12,7 @@
     "editor.fontFamily": "'Hack', 'Source Code Variable', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 
     "[python]": {
+        "editor.insertSpaces": true,
         "editor.rulers": [
             79
         ]
