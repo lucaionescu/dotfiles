@@ -26,4 +26,3 @@ code --install-extension PeterJausovec.vscode-docker
 code --install-extension ritwickdey.LiveServer
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension tomoki1207.pdf
-
