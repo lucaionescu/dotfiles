@@ -18,7 +18,21 @@
         ]
     },
 
+    "[julia]": {
+        "editor.insertSpaces": true
+    },
+
+    "[css]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
     "[html]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[javascript]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2
     },
