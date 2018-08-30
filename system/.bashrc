@@ -155,3 +155,4 @@ if [ -f ~/.bash_functions ]; then
   fi
 
 source ~/pureline/pureline ~/.pureline.conf
+
