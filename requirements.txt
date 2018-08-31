@@ -1,0 +1,12 @@
+autopep8
+beautifulsoup4
+lxml
+numpy
+matplotlib
+pacman-mirrors
+Pillow
+pipreqs
+progress
+pylint
+requests
+scipy
