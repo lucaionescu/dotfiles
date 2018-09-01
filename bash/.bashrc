@@ -90,12 +90,6 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
-alias julia="~/julia-1.0.0/bin/julia"
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
@@ -141,9 +135,6 @@ ex ()
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
-# cocos2d
-export PATH=/opt/cocos2d-x/tools/cocos2d-console/bin:/opt/cocos2d-x/tools/cocos2d-console/plugins/plugin_package:${PATH}
-
 # external alias file
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
@@ -155,4 +146,3 @@ if [ -f ~/.bash_functions ]; then
   fi
 
 source ~/pureline/pureline ~/.pureline.conf
-
