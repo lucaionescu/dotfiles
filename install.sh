@@ -35,3 +35,7 @@ ln -sf "$DOTFILES_DIR/pureline/.pureline.conf" ~
 ln -sf "$DOTFILES_DIR/i3/config" ~/.i3/
 ln -sf "$DOTFILES_DIR/code/settings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/code/keybindings.json" ~/.config/Code/User/
+ln -sf "$DOTFILES_DIR/zsh/.zshrc" ~
+
+# set wallpaper
+feh --bg-scale "$DOTFILES_DIR/wallpaper/E2EBF0.jpg"

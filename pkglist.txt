@@ -7,6 +7,7 @@ clipit
 docker
 dropbox-cli
 emacs
+feh
 git
 powertop
 python-pip
