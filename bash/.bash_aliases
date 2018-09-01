@@ -1,3 +1,4 @@
+alias bashrc="emacs $HOME/Documents/dotfiles/bash/.bashrc"
 alias emacs="emacs -nw"
 alias g="git"
 alias hn="hostname"
