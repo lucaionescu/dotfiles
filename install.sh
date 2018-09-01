@@ -35,6 +35,7 @@ ln -sf "$DOTFILES_DIR/pureline/.pureline.conf" ~
 ln -sf "$DOTFILES_DIR/i3/config" ~/.i3/
 ln -sf "$DOTFILES_DIR/code/settings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/code/keybindings.json" ~/.config/Code/User/
+ln -sf "$DOTFILES_DIR/x/.xinitrc" ~
 ln -sf "$DOTFILES_DIR/zsh/.zshrc" ~
 
 # set wallpaper
