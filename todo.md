@@ -5,4 +5,4 @@
 - Dive into emacs
 - Write script for (un-)connecting external monitor
 - Write function for opening man pages as pdf
-
+- Remap keybaord keys
