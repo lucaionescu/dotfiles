@@ -7,3 +7,4 @@
 - Write function for opening man pages as pdf
 - Remap keyboard keys
 - set up latex
+- bash script for inverting colors
