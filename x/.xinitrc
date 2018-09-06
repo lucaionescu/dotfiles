@@ -65,4 +65,3 @@ get_session(){
 
 exec $(get_session)
 
-~/.fehbg &
