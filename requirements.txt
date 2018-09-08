@@ -4,9 +4,12 @@ lxml
 numpy
 matplotlib
 pacman-mirrors
+pandas
 Pillow
 pipreqs
 progress
 pylint
 requests
+scikit-learn
 scipy
+

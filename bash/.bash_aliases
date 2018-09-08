@@ -11,6 +11,7 @@ alias more=less
 alias np='nano -w PKGBUILD'
 alias open="xdg-open"
 alias reload="source ~/.bashrc"
+alias rg="ranger"
 alias wifilist="nmcli device wifi list"
 alias zat="zathura"
 
