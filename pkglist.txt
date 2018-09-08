@@ -10,11 +10,11 @@ dropbox-cli
 emacs
 feh
 git
-powertop
 python-pip
 ranger
 redshift
 terminus-font
+tlp
 tree
 ttf-bitstream-vera
 ttf-dejavu
