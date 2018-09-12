@@ -1,3 +1,4 @@
+alias autorandr="~/Documents/dotfiles/scripts/autorandr"
 alias bashrc="emacs $HOME/Documents/dotfiles/bash/.bashrc"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes

@@ -1,5 +1,6 @@
 autopep8
 beautifulsoup4
+jupyter
 lxml
 numpy
 matplotlib

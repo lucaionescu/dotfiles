@@ -33,14 +33,14 @@ bindsym $mod+Return exec terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start program launcher (rofi)
-bindsym $mod+d exec --no-startup-id "rofi -show run"
+# start program launcher (j4-dmenu-desktop)
+bindsym $mod+d exec --no-startup-id "~/Documents/dotfiles/scripts/j4_display_binaries.sh"
 
 # switch windows with rofi
-bindsym $mod+Tab exec --no-startup-id "rofi -show window"
+# bindsym $mod+Tab exec --no-startup-id "rofi -show window"
 
 # rofi ssh
-bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
+# bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
 
 # arandr
 bindsym $mod+Shift+a exec --no-startup-id arandr
