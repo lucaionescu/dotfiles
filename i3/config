@@ -27,6 +27,12 @@ font pango:Hack 12px
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+# brightness up
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+
+# brightness down
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
 # start a terminal
 bindsym $mod+Return exec terminal
 
