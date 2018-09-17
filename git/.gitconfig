@@ -15,7 +15,7 @@
 	helper = cache
 
 [core]
-	editor = emacs
+	editor = "emacs -nw"
 	excludesfile = ~/.gitignore_global
 
 [help]
