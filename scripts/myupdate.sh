@@ -17,7 +17,7 @@ sleep 2s
 function remove_orphans {
     echo ":: check for orphan packages..."
 
-    ORPHANS=`pacman -Qdt`
+    ORPHANS=`pacman -Qqdt`
 
     if [ -z "$ORPHANS" ]
     then
@@ -27,14 +27,9 @@ function remove_orphans {
     else
 	echo -e ":: orphans found.\n$ORPHANS\n\n:: Removing..."
 	sudo pacman -R --nosave $ORPHANS
+	sleep 2s
+	exit
     fi
 }
 
-while [ 1 ]
-do
-    remove_orphans
-done
-
-echo ":: script did not exit normally!"
-sleep 2s
-exit
+remove_orphans
