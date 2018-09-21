@@ -9,6 +9,7 @@ alias l="ls -lahFG"
 alias more=less
 alias np='nano -w PKGBUILD'
 alias open="xdg-open"
+alias qute="qutebrowser"
 alias rg="ranger"
 alias wifilist="nmcli device wifi list"
 alias zat="zathura"
