@@ -149,4 +149,49 @@ if [ -f ~/.bash_functions ]; then
   . ~/.bash_functions
   fi
 
-source ~/pureline/pureline ~/.pureline.conf
+# source ~/pureline/pureline ~/.pureline.conf
+
+# git colors
+RED="\033[0;31m"
+YELLOW="\033[0;33m"
+GREEN="\033[0;32m"
+OCHRE="\033[38;5;95m"
+BLUE="\033[0;34m"
+WHITE="\033[0;37m"
+RESET="\033[0m"
+
+function git_color {
+    local git_status="$(git status 2> /dev/null)"
+
+    if [[ ! $git_status =~ "working directory clean" ]]; then
+	echo -e $RED
+    elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+	echo -e $YELLOW
+    elif [[ $git_status =~ "nothing to commit" ]]; then
+	echo -e $GREEN
+    else
+	echo -e $OCHRE
+    fi
+}
+
+function git_branch {
+    local git_status="$(git status 2> /dev/null)"
+    local on_branch="On branch ([^${IFS}]*)"
+    local on_commit="HEAD detached at ([^${IFS}]*)"
+
+    if [[ $git_status =~ $on_branch ]]; then
+	local branch=${BASH_REMATCH[1]}
+	echo "($branch)"
+    elif [[ $git_status =~ $on_commit ]]; then
+	local commit=${BASH_REMATCH[1]}
+	echo "($commit)"
+    fi
+}
+
+PS1="\[$WHITE\]\w"          # basename of pwd
+PS1+="\[\$(git_color)\]"        # colors git status
+PS1+="\$(git_branch)"           # prints current branch
+PS1+="\[$WHITE\]>\[$RESET\] "   # '#' for root, else '$'
+
+export PS1
+

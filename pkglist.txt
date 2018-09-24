@@ -11,6 +11,7 @@ feh
 git
 go
 python-pip
+qutebrowser
 ranger
 redshift
 terminus-font
