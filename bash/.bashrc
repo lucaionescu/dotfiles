@@ -149,15 +149,13 @@ if [ -f ~/.bash_functions ]; then
   . ~/.bash_functions
   fi
 
-# source ~/pureline/pureline ~/.pureline.conf
-
 # git colors
-RED="\033[0;31m"
-YELLOW="\033[0;33m"
-GREEN="\033[0;32m"
+RED="\033[01;31m"
+YELLOW="\033[01;33m"
+GREEN="\033[01;32m"
 OCHRE="\033[38;5;95m"
-BLUE="\033[0;34m"
-WHITE="\033[0;37m"
+BLUE="\033[01;34m"
+WHITE="\033[01;37m"
 RESET="\033[0m"
 
 function git_color {
@@ -188,10 +186,7 @@ function git_branch {
     fi
 }
 
-PS1="\[$WHITE\]\w"          # basename of pwd
-PS1+="\[\$(git_color)\]"        # colors git status
-PS1+="\$(git_branch)"           # prints current branch
-PS1+="\[$WHITE\]>\[$RESET\] "   # '#' for root, else '$'
+PS1="\[$WHITE\]\w \[\$(git_color)\]\$(git_branch)\[$BLUE\]\[$RESET\] "
 
 export PS1
 
