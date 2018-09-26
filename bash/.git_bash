@@ -9,12 +9,12 @@ RESET="\033[0m"
 function git_color {
 	local git_status="$(git status 2> /dev/null)"
 
-	if [[ ! $git_status =~ "working directory clean" ]]; then
-		echo -e $YELLOW
+	if [[ $git_status =~ "working directory clean" ]]; then
+		echo -e $RED
 	elif [[ $git_status =~ "Your branch is ahead of" ]]; then
 		echo -e $GREEN
 	elif [[ $git_status =~ "nothing to commit" ]]; then
-		echo -e $GREEN
+		echo -e $YELLOW
 	else
 		echo -e $OCHRE
 	fi
@@ -87,6 +87,6 @@ function parse_git_branch {
 	return
 }
 
-PS1="\[\$(git_color)\]\w \[\$(git_color)\]\$(parse_git_branch)\[$BLUE\]\[$RESET\] "
+PS1="\[$WHITE\]\w \[\$(git_color)\]\$(parse_git_branch)\[$BLUE\]\[$RESET\] "
 
 export PS1
