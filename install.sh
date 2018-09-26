@@ -9,9 +9,6 @@ pacman -S --needed < "$DOTFILES_DIR/pkglist"
 # install python packages
 pip3 install -r "$DOTFILES_DIR/requirements.txt"
 
-# install pureline
-git clone https://github.com/chris-marsh/pureline.git ~/pureline/
-
 # install vscode extensions
 code --install-extension julialang.language-julia
 code --install-extension ms-python.python
@@ -34,7 +31,7 @@ ln -sf "$DOTFILES_DIR/pureline/.pureline.conf" ~
 ln -sf "$DOTFILES_DIR/i3/config" ~/.i3/
 ln -sf "$DOTFILES_DIR/code/settings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/code/keybindings.json" ~/.config/Code/User/
-ln -sf "$DOTFILES_DIR/redshift/redshift.conf" ~/.config/redshift.conf 
+ln -sf "$DOTFILES_DIR/redshift.conf" ~/.config/redshift.conf 
 ln -sf "$DOTFILES_DIR/x/.xinitrc" ~
 ln -sf "$DOTFILES_DIR/x/.Xresources" ~/.Xresources
 ln -sf "$DOTFILES_DIR/zsh/.zshrc" ~
@@ -42,4 +39,6 @@ ln -sf "$DOTFILES_DIR/zsh/.zshrc" ~
 # set wallpaper
 feh --bg-scale "$DOTFILES_DIR/wallpaper/E2EBF0.jpg"
 
+# set emacs as default editor
 VISUAL="emacs -nw"; export VISUAL EDITOR="emacs -nw"; export EDITOR
+
