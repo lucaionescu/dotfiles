@@ -70,7 +70,11 @@ function parse_git_branch {
 			branch="NO BRANCH"
 		fi
 
-		echo " (${branch} ${state}${remote})"
+		if [[ -z ${state} && -z ${remote} ]]; then
+			echo " (${branch})"
+		else
+			echo " (${branch} ${state}${remote})"
+		fi
 	fi
 	return
 }
