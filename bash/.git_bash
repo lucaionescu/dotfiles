@@ -10,9 +10,9 @@ function git_color {
 	local git_status="$(git status 2> /dev/null)"
 
 	if [[ ! $git_status =~ "working directory clean" ]]; then
-		echo -e $RED
-	elif [[ $git_status =~ "Your branch is ahead of" ]]; then
 		echo -e $YELLOW
+	elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+		echo -e $GREEN
 	elif [[ $git_status =~ "nothing to commit" ]]; then
 		echo -e $GREEN
 	else
@@ -22,9 +22,11 @@ function git_color {
 
 function parse_git_branch {
 	git rev-parse --git-dir > /dev/null 2>&1
+
 	if [ $? -eq 0 ]; then
 		git_status="$(git status 2> /dev/null)"
 		git_stash="$(git stash list 2> /dev/null)"
+
 		branch_pattern="^On branch ([^${IFS}]*)"
 		detached_branch_pattern="# Not currently on any branch"
 		remote_pattern="Your branch is (.*) of"
@@ -33,14 +35,16 @@ function parse_git_branch {
 		new_pattern="new file:"
 		not_staged_pattern="Changes not staged for commit"
 
-		#files not staged for commit
+		# files not staged for commit
 		if [[ ${git_status}} =~ ${not_staged_pattern} ]]; then
 			state="✔"
 		fi
-		#files stashes
+
+		# files stashes
 		if [[ !${#git_stash} -eq 0 ]]; then
 			state="${state}◯"
 		fi
+
 		# add an else if or two here if you want to get more specific
 		# show if we're ahead or behind HEAD
 		if [[ ${git_status} =~ ${remote_pattern} ]]; then
@@ -50,26 +54,30 @@ function parse_git_branch {
 				remote="↓"
 			fi
 		fi
-		#new files
+
+		# new files
 		if [[ ${git_status} =~ ${new_pattern} ]]; then
 			remote="+"
 		fi
-		#untracked files
+
+		# untracked files
 		if [[ ${git_status} =~ ${untracked_pattern} ]]; then
 			remote="✖"
 		fi
-		#diverged branch
+
+		# diverged branch
 		if [[ ${git_status} =~ ${diverge_pattern} ]]; then
 			remote="↕"
 		fi
-		#branch name
+
+		# branch name / detached branch
 		if [[ ${git_status} =~ ${branch_pattern} ]]; then
 			branch=${BASH_REMATCH[1]}
-		#detached branch
 		elif [[ ${git_status} =~ ${detached_branch_pattern} ]]; then
 			branch="NO BRANCH"
 		fi
 
+		# remove space if there is nothing to show
 		if [[ -z ${state} && -z ${remote} ]]; then
 			echo " (${branch})"
 		else
@@ -79,6 +87,6 @@ function parse_git_branch {
 	return
 }
 
-PS1="\[$WHITE\]\w \[\$(git_color)\]\$(parse_git_branch)\[$BLUE\]\[$RESET\] "
+PS1="\[\$(git_color)\]\w \[\$(git_color)\]\$(parse_git_branch)\[$BLUE\]\[$RESET\] "
 
 export PS1
