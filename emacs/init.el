@@ -20,8 +20,3 @@
 (add-to-list 'load-path "~/.emacs.d/modes/")
   (require 'julia-mode)
 
-;; themes
-(add-to-list 'load-path "~/.emacs.d/themes/")
-
-(load-file "~/.emacs.d/themes/klere-theme.el")
-
