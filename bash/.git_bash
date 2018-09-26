@@ -20,22 +20,6 @@ function git_color {
 				    fi
 				    }
 
-function git_branch {
-    local git_status="$(git status 2> /dev/null)"
-        local on_branch="On branch ([^${IFS}]*)"
-	    local on_commit="HEAD detached at ([^${IFS}]*)"
-
-    if [[ $git_status =~ $on_branch ]]; then
-       local branch=${BASH_REMATCH[1]}
-       	     echo "($branch)"
-	         elif [[ $git_status =~ $on_commit ]]; then
-		      local commit=${BASH_REMATCH[1]}
-		      	    echo "($commit)"
-			        fi
-				}
-
-# PS1="\[$WHITE\]\w \[\$(git_color)\]\$(git_branch)\[$BLUE\]\[$RESET\] "
-
 function parse_git_branch {
     git rev-parse --git-dir > /dev/null 2>&1
     if [ $? -eq 0 ]; then
@@ -43,9 +27,9 @@ function parse_git_branch {
         git_stash="$(git stash list 2> /dev/null)"
         branch_pattern="^On branch ([^${IFS}]*)"
         detached_branch_pattern="# Not currently on any branch"
-        remote_pattern="# Your branch is (.*) of"
-        diverge_pattern="# Your branch and (.*) have diverged"
-        untracked_pattern="# Untracked files:"
+        remote_pattern="Your branch is (.*) of"
+        diverge_pattern="Your branch and (.*) have diverged"
+        untracked_pattern="Untracked files:"
         new_pattern="new file:"
         not_staged_pattern="Changes not staged for commit"
 
@@ -55,7 +39,7 @@ function parse_git_branch {
         fi
         #files stashes
         if [[ !${#git_stash} -eq 0 ]]; then
-            state="${state}☉"
+            state="${state}◯"
         fi
         # add an else if or two here if you want to get more specific
         # show if we're ahead or behind HEAD
