@@ -140,13 +140,13 @@ export EDITOR="emacs -nw"
 export GOPATH=~/go
 
 # external alias file
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
   fi
 
 # external functions file
-if [ -f ~/.bash_functions ]; then
-  . ~/.bash_functions
+if [ -f ~/.functions ]; then
+  . ~/.functions
   fi
 
 # git prompt
