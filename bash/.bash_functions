@@ -17,7 +17,7 @@ function cdl() {
 }
 
 # save man page as pdf
-function pdfman() {
+function manpdf() {
   man -t $@ | ps2pdf - "$@.pdf"
 }
 
