@@ -35,9 +35,6 @@ ln -sf "$DOTFILES_DIR/redshift.conf" ~/.config/redshift.conf
 ln -sf "$DOTFILES_DIR/x/.Xresources" ~/.Xresources
 ln -sf "$DOTFILES_DIR/zsh/.zshrc" ~
 
-# set wallpaper
-feh --bg-scale "$DOTFILES_DIR/wallpaper/E2EBF0.jpg"
-
 # set emacs as default editor
 VISUAL="emacs -nw"; export VISUAL EDITOR="emacs -nw"; export EDITOR
 
