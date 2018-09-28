@@ -22,8 +22,8 @@ code --install-extension equinusocio.vsc-material-theme
 
 # create symbolic links
 ln -sf "$DOTFILES_DIR/bash/.bashrc" ~
-ln -sf "$DOTFILES_DIR/bash/.bash_aliases" ~
-ln -sf "$DOTFILES_DIR/bash/.bash_functions" ~
+ln -sf "$DOTFILES_DIR/bash/.aliases" ~
+ln -sf "$DOTFILES_DIR/bash/.functions" ~
 ln -sf "$DOTFILES_DIR/bash/.bash_profile" ~
 ln -sf "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~
