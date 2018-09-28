@@ -16,6 +16,15 @@ function cdl() {
   cd "$1" && l
 }
 
+# switch keyboard layout between us and de
+function keymaps() {
+  if (setxkbmap -print | grep xkb_symbols | grep us); then
+    setxkbmap de
+  else
+    setxkbmap us
+  fi
+}
+
 # save man page as pdf
 function manpdf() {
   man -t $@ | ps2pdf - "$@.pdf"
