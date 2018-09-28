@@ -11,4 +11,3 @@ pylint
 requests
 scikit-learn
 scipy
-
