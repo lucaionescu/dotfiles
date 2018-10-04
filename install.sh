@@ -27,14 +27,13 @@ ln -sf "$DOTFILES_DIR/bash/.functions" ~
 ln -sf "$DOTFILES_DIR/bash/.bash_profile" ~
 ln -sf "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~
-ln -sf "$DOTFILES_DIR/pureline/.pureline.conf" ~
 ln -sf "$DOTFILES_DIR/i3/config" ~/.i3/
 ln -sf "$DOTFILES_DIR/code/settings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/code/keybindings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/redshift.conf" ~/.config/redshift.conf 
-ln -sf "$DOTFILES_DIR/x/.Xresources" ~/.Xresources
-ln -sf "$DOTFILES_DIR/zsh/.zshrc" ~
+ln -sf "$DOTFILES_DIR/x/.Xresources_dark" ~/.Xresources_dark
+ln -sf "$DOTFILES_DIR/x/.Xresources_light" ~/.Xresources_light
 
-# set emacs as default editor
+# set terminal emacs as default editor
 VISUAL="emacs -nw"; export VISUAL EDITOR="emacs -nw"; export EDITOR
 

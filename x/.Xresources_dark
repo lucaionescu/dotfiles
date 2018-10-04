@@ -3,14 +3,6 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
-*background: black
-*foreground: #ffffff
-!!*fading: 40
-*fadeColor: black
-*cursorColor: #ffffff
-*pointerColorBackground: black
-*pointerColorForeground: black
-
 ! black
 *.color0:       #272827
 *.color8:       #272827
@@ -43,18 +35,16 @@ Xft.hintstyle:              hintslight
 *.color7:       #c8cacc
 *.color15:      #edeff2
 
-URxvt*shading: 15
-
 URxvt.font:                       xft:Hack:style=Regular:pixelsize=12:antialias=true, xft:Source \Code \Pro \Medium:pixelsize=12:antialias=true, xft:Emojione, xft:DejaVu Sans:pixelsize=12
+
 URxvt*letterSpace: 0
 
-URxvt.depth:                      0
-URxvt.background:                 #000000
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 black
-URxvt*foreground:                 white
+URxvt*background:                 #000000
+URxvt*foreground:                 #ffffff
 URxvt*saveLines:                  10000
 
 Rxvt.perl-ext-common:            ...,clipboard,font-size
+

@@ -1,90 +1,42 @@
-# i3 config file (v4)
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+# Set mod key
 set $mod Mod4
 
-# set default desktop layout (default is tiling)
-# <stacking|tabbed>
+# set default desktop layout
 workspace_layout tabbed
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window none
 new_float none
 
-# Hide borders
 hide_edge_borders both
 
-# change borders
-bindsym $mod+u border none
-bindsym $mod+y border none
-bindsym $mod+n border none
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font for window titles.
 font pango:Hack 12px
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# brightness up
+# brightness up/down
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-
-# brightness down
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-# start a terminal
 bindsym $mod+Return exec terminal
-
-# kill focused window
 bindsym $mod+Shift+q kill
-
-# start program launcher (j4-dmenu-desktop)
 bindsym $mod+d exec --no-startup-id "~/Documents/dotfiles/scripts/j4_display_binaries.sh"
-
-# switch windows with rofi
-# bindsym $mod+Tab exec --no-startup-id "rofi -show window"
-
-# rofi ssh
-# bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
-
-# arandr
-bindsym $mod+Shift+a exec --no-startup-id arandr
-
-# launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
+bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+F5 exec terminal -e 'mocp'
 
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
+# sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later!
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 
-################################################################################################
-
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-
-# Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec chromium
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 focus_follows_mouse no
 
@@ -139,21 +91,11 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
-
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
-# to display names or symbols instead of plain workspace numbers you can use
-# something like: set $ws1 1:mail
-#                 set $ws2 2:
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -192,12 +134,6 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -257,27 +193,13 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# Resize window (you can also use the mouse for that)
+# Resize windows
 bindsym $mod+r mode "resize"
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
-
-        # exit resize mode: Enter or Escape
-        bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
@@ -287,34 +209,16 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen --lock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id redshift
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
 exec --no-startup-id dropbox
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-# exec --no-startup-id betterlockscreen -w
 exec --no-startup-id xautolock -time 15 -locker betterlockscreen
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #282A2E
-# to:
-# background $term_background
-# Same logic applied to everything else.
 set_from_resource $term_background background
 set_from_resource $term_foreground foreground
 set_from_resource $term_color0     color0
@@ -334,25 +238,18 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
+# i3bar
 bar {
         i3bar_command i3bar
         status_command i3status
         position top
         tray_output none
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
         bindsym button4 nop
         bindsym button5 nop
-        # font xft:Source Code Pro Medium 11px
         strip_workspace_numbers yes
 
     colors {
         background   #E2EBF0
-        # background $term_background
         statusline   #282A2E
         separator  #E2EBF0
 
@@ -365,10 +262,10 @@ bar {
     }
 }
 
-# hide/unhide i3status bar
+# hide/unhide i3bar
 bindsym $mod+m bar mode toggle
 
-# Theme colors
+# colors
 # class                   border  backgr. text    indic.   child_border
   client.focused          #E2EBF0 #E2EBF0 #282A2E #282A2E
   client.focused_inactive #E2EBF0 #E2EBF0 #7B808C #282A2E
@@ -378,27 +275,13 @@ bindsym $mod+m bar mode toggle
 
   client.background       #E2EBF0
 
-#############################
-### settings for i3-gaps: ###
-#############################
-
+# i3-gaps
 # Set inner/outer gaps
 gaps inner 10
 gaps outer -5
-
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)

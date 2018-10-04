@@ -24,5 +24,4 @@ alias bashrc="emacs $HOME/Documents/dotfiles/bash/.bashrc"
 alias i3conf="emacs $HOME/Documents/dotfiles/i3/config"
 alias myupdate="sudo $HOME/Documents/dotfiles/scripts/myupdate.sh"
 alias reload="source $HOME/.bashrc && i3-msg reload"
-alias xresources="emacs $HOME/Documents/dotfiles/x/.Xresources"
 
