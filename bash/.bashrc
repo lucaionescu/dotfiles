@@ -4,6 +4,7 @@
 
 [[ $- != *i* ]] && return
 
+# pretty print colors
 colors() {
 	local fgc bgc vals seq0
 
@@ -102,12 +103,9 @@ shopt -s checkwinsize
 
 shopt -s expand_aliases
 
-# export QT_SELECT=4
-
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
 # # ex - archive extractor
 # # usage: ex <file>
 ex ()
@@ -132,12 +130,9 @@ ex ()
   fi
 }
 
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-
 export EDITOR="emacs -nw"
-
 export GOPATH=~/go
+export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35" # better yaourt colors
 
 # external alias file
 if [ -f ~/.aliases ]; then
@@ -153,4 +148,3 @@ if [ -f ~/.functions ]; then
 if [ -f ~/.git_bash ]; then
     . ~/.git_bash
 fi
-

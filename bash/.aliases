@@ -10,9 +10,9 @@ alias more=less
 alias np='nano -w PKGBUILD'
 alias open="xdg-open"
 alias rg="ranger"
+alias rmr="rm -r"
 alias wifilist="nmcli device wifi list"
 alias zat="zathura"
-
 alias _="sudo"
 
 alias ..="cd .."
