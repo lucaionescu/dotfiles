@@ -204,7 +204,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id betterlockscreen --lock
+bindsym $mod+9 exec --no-startup-id betterlockscreen -l dim
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -214,7 +214,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id dropbox
-exec --no-startup-id xautolock -time 15 -locker betterlockscreen
+exec --no-startup-id xautolock -time 5 -locker 'betterlockscreen -l dim'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
