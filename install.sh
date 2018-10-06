@@ -31,8 +31,7 @@ ln -sf "$DOTFILES_DIR/i3/config" ~/.i3/
 ln -sf "$DOTFILES_DIR/code/settings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/code/keybindings.json" ~/.config/Code/User/
 ln -sf "$DOTFILES_DIR/redshift.conf" ~/.config/redshift.conf 
-ln -sf "$DOTFILES_DIR/x/.Xresources_dark" ~/.Xresources_dark
-ln -sf "$DOTFILES_DIR/x/.Xresources_light" ~/.Xresources_light
+ln -sf "$DOTFILES_DIR/x/.Xresources" ~/.Xresources
 
 # set terminal emacs as default editor
 VISUAL="emacs -nw"; export VISUAL EDITOR="emacs -nw"; export EDITOR

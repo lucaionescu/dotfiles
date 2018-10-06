@@ -87,6 +87,6 @@ function parse_git_branch {
 	return
 }
 
-PS1="\[$GREEN\]\w \[\$(git_color)\]\$(parse_git_branch)\[$BLUE\]\[$RESET\] "
+PS1="\[$WHITE\]\w \[\$(git_color)\]\$(parse_git_branch)\[$BLUE\]\[$RESET\] "
 
 export PS1
