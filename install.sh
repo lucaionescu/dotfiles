@@ -10,7 +10,6 @@ pacman -S --needed < "$DOTFILES_DIR/pkglist"
 pip3 install -r "$DOTFILES_DIR/requirements.txt"
 
 # install vscode extensions
-code --install-extension julialang.language-julia
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
 code --install-extension ms-vscode.Go

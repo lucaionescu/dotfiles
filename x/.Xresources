@@ -42,8 +42,9 @@ URxvt*letterSpace: 0
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 #000000
+URxvt*background:                 #040B12
 URxvt*foreground:                 #ffffff
+URxvt*transparent:		  false
 URxvt*saveLines:                  10000
 
 Rxvt.perl-ext-common:            ...,clipboard,font-size
