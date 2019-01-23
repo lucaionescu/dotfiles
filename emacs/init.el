@@ -15,8 +15,3 @@
 
 ;; highlight matching paranthesis
 (show-paren-mode 1)
-
-;; julia mode
-(add-to-list 'load-path "~/.emacs.d/modes/")
-  (require 'julia-mode)
-

@@ -6,11 +6,6 @@ function cipssh() {
   fi
 }
 
-# create a new directory and enter it
-function mk() {
-  mkdir -p "$@" && cd "$@"
-}
-
 # change to directory and list content
 function cdl() {
   cd "$1" && l
@@ -29,4 +24,3 @@ function keymaps() {
 function manpdf() {
   man -t $@ | ps2pdf - "$@.pdf"
 }
-

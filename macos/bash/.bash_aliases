@@ -14,6 +14,7 @@ alias rmr="rm -r"
 alias wifilist="nmcli device wifi list"
 alias zat="zathura"
 alias _="sudo"
+alias tree="tree -C"
 
 alias ..="cd .."
 alias ...="cd ../.."

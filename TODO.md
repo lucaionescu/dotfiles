@@ -1,9 +1,4 @@
-#### TODO
-  - [x] fix lock screen on sleep
-  - [ ] remove output from keymaps function
-  - [ ] write script for switching monitors
-  - [ ] write script for inverting bash colors
-  - [ ] use _powertop_
-  - [ ] repartition
-  - [ ] remap fn keys
-  - [ ] change bash prompt color when in read-only directory
+- download and install z from github
+- finish Makefile for macos and manjaro
+- add option to download installation script from website using `curl`
+- write installation notes to README.md
