@@ -1,9 +1,10 @@
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
+# PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+# export PATH
 
 export EDITOR="emacs -nw"
+export PATH="/home/ionescu/miniconda3/bin:$PATH"
 
 # external alias file
 if [ -f ~/.bash_aliases ]; then
@@ -18,6 +19,7 @@ if [ -f ~/.bash_functions ]; then
 . $HOME/z.sh
 
 export PS1="\[\e[36m\]\`parse_conda_environment\`\[\e[m\]\\w \[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[33m\]➜\[\e[m\] "
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/ioan/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
