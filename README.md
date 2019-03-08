@@ -13,5 +13,5 @@ $ make
 ### 🙏 Inspirations
  - https://github.com/rgomezcasas/dotfiles
  - https://github.com/rootbeersoup/dotfiles
- - https://github.com/masasam/dotfiles/
+ - https://github.com/masasam/dotfiles
  - https://github.com/webpro/dotfiles
