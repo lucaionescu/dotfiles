@@ -1,4 +1,1 @@
-- download and install z from github
-- finish Makefile for macos and manjaro
-- add option to download installation script from website using `curl`
-- write installation notes to README.md
+- handle CSS for custom safari zoom level. but this seems to cause problems in jupyter notebooks

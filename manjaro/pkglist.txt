@@ -9,8 +9,6 @@ dropbox-cli
 emacs
 feh
 git
-go
-python-pip
 ranger
 redshift
 terminus-font

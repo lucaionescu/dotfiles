@@ -4,7 +4,7 @@
 osascript -e 'tell application "System Preferences" to quit'
 
 # Disable startup noise
-sudo nvram SystemAudioVolume=%01
+sudo nvram SystemAudioVolume=%80
 
 # Enable SSH
 sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
