@@ -1,7 +1,7 @@
-# 💻 Dotfiles
+## 💻 Dotfiles
 Dotfiles repository for my macOS/Manjaro setup.
 
-## 🔑 Installation
+### 🔑 Installation
 Either download the installation script from the website (code can be found [here](https://github.com/lucaionescu/lucaionescu.github.io/blob/master/dotfiles.sh)) or by using `curl`:
 
 ```bash
@@ -10,7 +10,7 @@ $ cd ~/dotfiles
 $ make
 ```
 
-## 🙏 Inspirations
+### 🙏 Inspirations
  - https://github.com/rgomezcasas/dotfiles
  - https://github.com/rootbeersoup/dotfiles
  - https://github.com/masasam/dotfiles/
