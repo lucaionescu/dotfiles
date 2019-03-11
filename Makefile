@@ -58,7 +58,7 @@ unlink:
 	unlink ${HOME}/.bash_functions
 	unlink ${HOME}/.bash_profile
 
-.PHONY: brew git-init
+.PHONY: brew git-init install_z
 
 brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -68,6 +68,6 @@ git-init:
 	ln -sf ${DOTFILES_DIR}/git/.gitconfig $(HOME)/.gitconfig
 	ln -sf ${DOTFILES_DIR}/git/.gitignore_global $(HOME)/.gitignore_global
 
-z:
+install_z:
 	curl https://raw.githubusercontent.com/rupa/z/master/z.sh > $(HOME)/z.sh
 	chmod +x $(HOME)/z.sh

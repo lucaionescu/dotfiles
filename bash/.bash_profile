@@ -3,9 +3,6 @@
 # PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 # export PATH
 
-export EDITOR="emacs -nw"
-export PATH="/home/ionescu/miniconda3/bin:$PATH"
-
 # external alias file
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
@@ -18,6 +15,8 @@ if [ -f ~/.bash_functions ]; then
 
 . $HOME/z.sh
 
+export EDITOR="emacs -nw"
+export PATH="/home/ionescu/miniconda3/bin:$PATH"
 export PS1="\[\e[36m\]\`parse_conda_environment\`\[\e[m\]\\w \[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[33m\]➜\[\e[m\] "
 
 # >>> conda initialize >>>
