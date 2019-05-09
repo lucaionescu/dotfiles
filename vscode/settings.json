@@ -1,25 +1,24 @@
 {
     "files.autoSave": "onFocusChange",
-    
-    "editor.fontSize": 12,
-    "editor.insertSpaces": false,
+	"files.trimTrailingWhitespace": true,
+
     "editor.renderWhitespace": "boundary",
     "editor.minimap.enabled": false,
     "editor.scrollBeyondLastLine": false,
     "editor.multiCursorModifier": "alt",
     "editor.renderIndentGuides": true,
     "editor.wordWrap": "on",
-    "editor.fontFamily": "'Hack', 'Source Code Variable', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Hack', 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.smoothScrolling": true,
+    "editor.fontSize": 11,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
 
     "[python]": {
         "editor.insertSpaces": true,
         "editor.rulers": [
             79
         ]
-    },
-
-    "[julia]": {
-        "editor.insertSpaces": true
     },
 
     "[css]": {
@@ -37,11 +36,19 @@
         "editor.tabSize": 2
     },
 
-    "workbench.statusBar.feedback.visible": false,
+    "[rust]": {
+        "editor.insertSpaces": true,
+	},
+
+	"workbench.statusBar.feedback.visible": false,
+	"workbench.activityBar.visible": true,
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorCustomizations": {},
-    "workbench.colorTheme": "Default Light+",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Monokai Pro",
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#2d2a2e",
+		"activityBar.background": "#2d2a2e"
+	},
 
     "diffEditor.ignoreTrimWhitespace": true,
 
@@ -53,17 +60,15 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
 
-    "python.pythonPath": "/usr/bin/python3",
+    "python.pythonPath": "/Users/ioan/miniconda3/bin/python",
 
-    "window.zoomLevel": 0,
+	"breadcrumbs.enabled": false,
 
-    "vsicons.dontShowNewVersionMessage": true,
+    "window.title": "${activeEditorLong}",
+	"window.zoomLevel": -0.3,
 
-    "julia.enableTelemetry": true,
-    "julia.enableCrashReporter": true,
+    "material-icon-theme.showWelcomeMessage": false,
+    "material-icon-theme.showReloadMessage": false,
 
-    "materialTheme.autoApplyIcons": false,
-
-    "liveServer.settings.donotShowInfoMsg": true,
-    "breadcrumbs.enabled": false,
+	"liveServer.settings.donotShowInfoMsg": true,
 }
