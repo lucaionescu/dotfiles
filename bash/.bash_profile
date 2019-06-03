@@ -17,7 +17,7 @@ if [ -f ~/.bash_functions ]; then
 
 export EDITOR="emacs -nw"
 export PATH="/home/ionescu/miniconda3/bin:$PATH"
-export PS1="\[\e[36m\]\`parse_conda_environment\`\[\e[m\]\\w \[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[33m\]➜\[\e[m\] "
+export PS1="\[\e[36m\]\`parse_conda_environment\`\[\e[m\]\\w \[\e[34m\]\`parse_git_branch\`\[\e[m\]\[\e[33m\]->\[\e[m\] "
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
