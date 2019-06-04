@@ -34,7 +34,6 @@ usage:
 
 linux:
 	install_z
-	install_oh_my_zsh
 	git-init
 	pacman -S --needed < "${DOTFILES_DIR}/manjaro/pkglist"
 	ln -sf ${DOTFILES_DIR}/manjaro/.Xresources $(HOME)/.Xresources
@@ -45,7 +44,6 @@ macos:
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	brew
 	install_z
-	install_oh_my_zsh
 	softwareupdate -ai
 
 link:
@@ -70,5 +68,3 @@ install_z:
 	curl https://raw.githubusercontent.com/rupa/z/master/z.sh > $(HOME)/z.sh
 	chmod +x $(HOME)/z.sh
 
-install_oh_my_zsh:
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
