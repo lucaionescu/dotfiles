@@ -16,3 +16,6 @@ $ make
  - https://github.com/masasam/dotfiles
  - https://github.com/webpro/dotfiles
  - https://github.com/gokulkrishh/dotfiles
+
+### 📝 To-Do
+ - Add Git to zsh prompt
