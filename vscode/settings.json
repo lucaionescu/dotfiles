@@ -8,7 +8,8 @@
     "editor.multiCursorModifier": "alt",
     "editor.renderIndentGuides": true,
     "editor.wordWrap": "on",
-    "editor.fontFamily": "'Hack', 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontFamily": "'FiraCode-Retina', 'Hack', 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontLigatures": true,
     "editor.smoothScrolling": true,
     "editor.fontSize": 11,
 	"editor.detectIndentation": false,
@@ -18,8 +19,12 @@
         "editor.insertSpaces": true,
         "editor.rulers": [
             79
-        ]
-    },
+		],
+		"editor.defaultFormatter": "ms-python.python"
+	},
+	"python.formatting.autopep8Args": [
+		"--max-line-length=100"
+	],
 
     "[css]": {
         "editor.insertSpaces": true,
@@ -42,13 +47,9 @@
 
 	"workbench.statusBar.feedback.visible": false,
 	"workbench.activityBar.visible": true,
-    "workbench.startupEditor": "none",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Monokai Pro",
-	"workbench.colorCustomizations": {
-		"statusBar.background": "#2d2a2e",
-		"activityBar.background": "#2d2a2e"
-	},
+	"workbench.startupEditor": "none",
+	"workbench.colorTheme": "Monokai Pro",
+	"workbench.iconTheme": "material-icon-theme",
 
     "diffEditor.ignoreTrimWhitespace": true,
 
@@ -71,4 +72,12 @@
     "material-icon-theme.showReloadMessage": false,
 
 	"liveServer.settings.donotShowInfoMsg": true,
+
+	"autoDocstring.docstringFormat": "numpy",
+
+	"terminal.integrated.fontFamily": "'FiraCode-Retina'",
+	"terminal.integrated.rendererType": "dom",
+	"terminal.integrated.env.osx": {
+        "PATH": ""
+	},
 }

@@ -1,4 +1,6 @@
 tap "homebrew/bundle"
+tap "omebrew/cask-fonts"
 brew "git"
 brew "htop"
 brew "tree"
+brew "font-fira-code"

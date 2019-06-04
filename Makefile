@@ -34,6 +34,7 @@ usage:
 
 linux:
 	install_z
+	install_oh_my_zsh
 	git-init
 	pacman -S --needed < "${DOTFILES_DIR}/manjaro/pkglist"
 	ln -sf ${DOTFILES_DIR}/manjaro/x/.Xresources $(HOME)/.Xresources
@@ -41,33 +42,35 @@ linux:
 	ln -sf ${DOTFILES_DIR}/manjaro/bash/.bashrc $(HOME)/.bashrc
 
 macos:
-	install_z
-	brew
-	git-init
 	bash $(DOTFILES_DIR)/macos/defaults.sh
+	brew
+	install_z
+	install_oh_my_zsh
 	softwareupdate -ai
 
 link:
-	git-init
-	ln -sf ${DOTFILES_DIR}/bash/.bash_aliases $(HOME)/.bash_aliases
-	ln -sf ${DOTFILES_DIR}/bash/.bash_functions $(HOME)/.bash_functions
 	ln -sf ${DOTFILES_DIR}/bash/.bash_profile $(HOME)/.bash_profile
+	ln -sf ${DOTFILES_DIR}/zsh/.zshrc $(HOME)/.zshrc
+	ln -sf ${DOTFILES_DIR}/zsh/.zprofile $(HOME)/.zprofile
+	ln -sf ${DOTFILES_DIR}/git/.gitconfig $(HOME)/.gitconfig
+	ln -sf ${DOTFILES_DIR}/git/.gitignore_global $(HOME)/.gitignore_global
 
 unlink:
-	unlink ${HOME}/.bash_aliases
-	unlink ${HOME}/.bash_functions
-	unlink ${HOME}/.bash_profile
+	unlink $(HOME)/.bash_profile
+	unlink $(HOME)/.zshrc
+	unlink $(HOME)/.zprofile
+	unlink $(HOME)/.gitconfig
+	unlink $(HOME)/.gitignore_global
 
-.PHONY: brew git-init install_z
+.PHONY: brew git-init install_z install_oh_my_zsh
 
 brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
 
-git-init:
-	ln -sf ${DOTFILES_DIR}/git/.gitconfig $(HOME)/.gitconfig
-	ln -sf ${DOTFILES_DIR}/git/.gitignore_global $(HOME)/.gitignore_global
-
 install_z:
 	curl https://raw.githubusercontent.com/rupa/z/master/z.sh > $(HOME)/z.sh
 	chmod +x $(HOME)/z.sh
+
+install_oh_my_zsh:
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

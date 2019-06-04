@@ -1,1 +1,0 @@
-- handle CSS for custom safari zoom level. but this seems to cause problems in jupyter notebooks
