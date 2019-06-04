@@ -4,6 +4,45 @@
 
 [[ $- != *i* ]] && return
 
+# aliases
+alias cp="cp -i"
+alias df="df -h"
+alias emacs="emacs -nw"
+alias g="git"
+alias h="history"
+alias lab="jupyter-lab"
+alias l="ls -lahFG"
+alias p="python3"
+alias reload="source ~/.zprofile"
+alias _="sudo"
+alias t="tree -aC"
+alias top="htop"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -="cd -"
+
+# functions
+function cipssh() {
+  if [ "$*" == "" ]; then
+    ssh ionescu@remote.cip.ifi.lmu.de
+  else
+    ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
+  fi
+}
+
+# change to directory and list content
+function cdl() {
+  cd "$1" && l
+}
+
+# create directory and cd to it
+function mcd() {
+  mkdir -p "$1"
+  cd "$1"
+}
+
 # pretty print colors
 colors() {
 	local fgc bgc vals seq0
@@ -132,18 +171,3 @@ ex ()
 
 export EDITOR="emacs -nw"
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35" # better yaourt colors
-
-# external alias file
-if [ -f ~/.aliases ]; then
-  . ~/.bash_aliases
-  fi
-
-# external functions file
-if [ -f ~/.functions ]; then
-  . ~/.bash_functions
-  fi
-
-# git prompt
-if [ -f ~/.git_bash ]; then
-    . ~/.git_bash
-fi

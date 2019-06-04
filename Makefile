@@ -37,9 +37,9 @@ linux:
 	install_oh_my_zsh
 	git-init
 	pacman -S --needed < "${DOTFILES_DIR}/manjaro/pkglist"
-	ln -sf ${DOTFILES_DIR}/manjaro/x/.Xresources $(HOME)/.Xresources
-	ln -sf ${DOTFILES_DIR}/manjaro/i3/config $(HOME)/.i3/
-	ln -sf ${DOTFILES_DIR}/manjaro/bash/.bashrc $(HOME)/.bashrc
+	ln -sf ${DOTFILES_DIR}/manjaro/.Xresources $(HOME)/.Xresources
+	ln -sf ${DOTFILES_DIR}/manjaro/i3_config $(HOME)/.i3/config
+	ln -sf ${DOTFILES_DIR}/manjaro/.bashrc $(HOME)/.bashrc
 
 macos:
 	bash $(DOTFILES_DIR)/macos/defaults.sh
@@ -49,14 +49,12 @@ macos:
 	softwareupdate -ai
 
 link:
-	ln -sf ${DOTFILES_DIR}/bash/.bash_profile $(HOME)/.bash_profile
 	ln -sf ${DOTFILES_DIR}/zsh/.zshrc $(HOME)/.zshrc
 	ln -sf ${DOTFILES_DIR}/zsh/.zprofile $(HOME)/.zprofile
 	ln -sf ${DOTFILES_DIR}/git/.gitconfig $(HOME)/.gitconfig
 	ln -sf ${DOTFILES_DIR}/git/.gitignore_global $(HOME)/.gitignore_global
 
 unlink:
-	unlink $(HOME)/.bash_profile
 	unlink $(HOME)/.zshrc
 	unlink $(HOME)/.zprofile
 	unlink $(HOME)/.gitconfig
