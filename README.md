@@ -17,5 +17,5 @@ $ make
  - https://github.com/webpro/dotfiles
  - https://github.com/gokulkrishh/dotfiles
 
-### 📝 To-Do
+### 📝 To-Do
  - Add Git to zsh prompt
