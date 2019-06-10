@@ -5,7 +5,7 @@
     dotfiles_check ()
     {
       if [ -d "$HOME/dotfiles" ]; then
-        printf "~/dotfiles directory already exists.\\n" &gt;&amp;2
+        printf "~/dotfiles directory already exists.\\n" >&2
         exit 1
       fi
     }
