@@ -5,7 +5,7 @@
     dotfiles_check ()
     {
       if [ -d "$HOME/dotfiles" ]; then
-        printf "~/dotfiles directory already exists.\\n" >&2
+        printf "~/dotfiles directory already exists.\\n"
         exit 1
       fi
     }
@@ -24,7 +24,7 @@
       if [ -d "$HOME/dotfiles" ]; then
         printf "repository downloaded to ~/dotfiles\\n\\n"
       else
-        printf "dotfiles either not downloaded or not extracted successfully\\n" &gt;&amp;2
+        printf "dotfiles either not downloaded or not extracted successfully\\n"
         exit 1
       fi
     }
