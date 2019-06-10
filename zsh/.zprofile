@@ -1,3 +1,6 @@
+PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH
+
 export EDITOR="emacs -nw"
 export PATH="/home/ionescu/miniconda3/bin:$PATH"
 
