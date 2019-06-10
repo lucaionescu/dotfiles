@@ -1,6 +1,6 @@
     # dotfiles repository download script
     # Originally written by Darryl Abbate (https://github.com/rootbeersoup)
-    # curl -fsSL https://lucaionescu.github.io/dotfiles.sh | sh
+    # curl -fsSL https://raw.githubusercontent.com/lucaionescu/dotfiles/master/get_dotfiles.sh | sh
 
     dotfiles_check ()
     {
