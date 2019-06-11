@@ -21,3 +21,4 @@ The code for the installation script can be found [here](https://github.com/luca
 
 ### 📝 To-Do
  - Add Git to zsh prompt
+ - Include VS Code installation and settings
