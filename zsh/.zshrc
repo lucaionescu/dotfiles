@@ -46,9 +46,9 @@ function mcd() {
 
 # functions
 function cipssh() {
-  if [ "$*" == "" ]; then
-    ssh ionescu@remote.cip.ifi.lmu.de
-  else
-    ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
-  fi
+	if [ "$1" = "" ]; then
+		ssh ionescu@remote.cip.ifi.lmu.de
+	else
+		ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
+	fi
 }
