@@ -11,12 +11,14 @@
 	br = branch
 	br = branch
 	ci = commit
+	cl = clone
 	co = checkout
 	d = diff
 	f = fetch
 	forgot = commit --amend --no-edit
 	l = log --graph --abbrev-commit --decorate --date=short --format=format:'%C(red)%h%C(reset) - %C(blue)(%ai) %C(reset) %C(yellow)%s%C(reset) %C(yellow)- %an%C(reset)%C(red)%d%C(reset)' --all
 	ps = push
+	pu = pull
 	s = status
 	uncommit = reset --soft HEAD^
 
