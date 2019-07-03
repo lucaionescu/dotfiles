@@ -62,6 +62,7 @@ unlink:
 
 brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew analytics off
 	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
 
 install_z:
