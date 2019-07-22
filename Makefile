@@ -1,4 +1,4 @@
-DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
+DOTFILES_DIR := $(shell pwd)
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
@@ -68,4 +68,3 @@ brew:
 install_z:
 	curl https://raw.githubusercontent.com/rupa/z/master/z.sh > $(HOME)/z.sh
 	chmod +x $(HOME)/z.sh
-

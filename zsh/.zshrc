@@ -1,5 +1,7 @@
 . $HOME/z.sh
 
+autoload -Uz compinit && compinit
+
 autoload -U colors && colors
 PS1="%{$fg[yellow]%}%~/ %{$reset_color%}%"
 
