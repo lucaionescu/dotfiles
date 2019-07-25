@@ -18,6 +18,7 @@ The code for the installation script can be found [here](https://github.com/luca
  - https://github.com/masasam/dotfiles
  - https://github.com/webpro/dotfiles
  - https://github.com/gokulkrishh/dotfiles
+ - https://github.com/titipata/customize_ipython_notebook
 
 ### 📝 To-Do
  - Add Git to zsh prompt
