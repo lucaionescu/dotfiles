@@ -1,4 +1,4 @@
-/*
+  /*
 Custom CSS for Jupyter Notebooks.
 File has to be placed in ~/.jupyter/custom/custom.css
 */
@@ -38,4 +38,8 @@ div.container pre{
 div.tooltiptext pre{
   font-family: 'Fira Code', monospace;
   font-size: 8pt;
+}
+
+.container {
+  width: 90% !important;
 }
