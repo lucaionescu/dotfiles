@@ -13,8 +13,11 @@ HISTFILE=$HOME/.histfile
 alias bubc="brew upgrade && brew cleanup"
 alias bubo="brew update && brew outdated"
 alias bubu="bubo && bubc"
+alias c="code"
+alias cdv="conda deactivate"
 alias cp="cp -iv"
 alias df="df -h"
+alias dv="deactivate"
 alias emacs="emacs -nw"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
@@ -24,6 +27,8 @@ alias lab="jupyter-lab"
 alias l="ls -lahFG"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
+alias nb="jupyter-notebook"
+alias o="open"
 alias p="python3"
 alias reload="source ~/.zshrc"
 alias _="sudo"
@@ -31,27 +36,27 @@ alias t="tree -aC"
 alias top="htop"
 
 alias ..="cd .."
-alias ...="cd ../../"
-alias ....="cd ../../../"
-alias .....="cd ../../../../"
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 alias -- -="cd -"
 
+function ddb {
+	java -Djava.library.path=~/dynamodb_local_latest/DynamoDBLocal_lib -jar ~/dynamodb_local_latest/DynamoDBLocal.jar -sharedDb &
+}
+
 # change to directory and list content
-function cdl() {
+function cl() {
   cd "$1" && l
 }
 
 # create directory and cd to it
-function mcd() {
+function mc() {
   mkdir -p "$1"
   cd "$1"
 }
 
-# functions
 function cipssh() {
 	if [ "$1" = "" ]; then
 		ssh ionescu@remote.cip.ifi.lmu.de
@@ -59,3 +64,19 @@ function cipssh() {
 		ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
 	fi
 }
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/ioan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/ioan/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ioan/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/ioan/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
