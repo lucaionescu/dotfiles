@@ -45,6 +45,7 @@ macos:
 	brew
 	install_z
 	install_miniconda
+	install_pure_prompt
 	softwareupdate -ai
 
 link:
@@ -76,3 +77,6 @@ install_miniconda:
 	curl https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -o $(HOME)/miniconda.sh
 	bash $(HOME)/miniconda.sh -b -p $(HOME)/miniconda
 	export PATH="$(HOME)/miniconda/bin:$PATH"
+
+install_pure_prompt:
+	npm install --global pure-prompt

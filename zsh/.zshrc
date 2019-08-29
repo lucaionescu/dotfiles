@@ -2,14 +2,19 @@
 
 autoload -Uz compinit && compinit
 
+# pure prompt
+autoload -U promptinit; promptinit
+prompt pure
+
 autoload -U colors && colors
-PS1="%{$fg[yellow]%}%~/ %{$reset_color%}%"
+# PS1="%{$fg[yellow]%}%~/ %{$reset_color%}%"
 
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.histfile
 
 # aliases
+alias cav="conda activate"
 alias bubc="brew upgrade && brew cleanup"
 alias bubo="brew update && brew outdated"
 alias bubu="bubo && bubc"
@@ -57,6 +62,11 @@ function mc() {
   cd "$1"
 }
 
+# cheat.sh output for command
+function cheat() {
+  curl "cheat.sh/""$1"
+}
+
 function cipssh() {
 	if [ "$1" = "" ]; then
 		ssh ionescu@remote.cip.ifi.lmu.de
@@ -79,4 +89,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
