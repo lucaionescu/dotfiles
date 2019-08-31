@@ -21,6 +21,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Enable scroll gestures for Dock icons
 defaults write com.apple.dock scroll-to-open -bool true
 
+# set no delay when revealing the Dock
+defaults write com.apple.dock autohide-delay -float 0
+
 # Enable tap-to-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
