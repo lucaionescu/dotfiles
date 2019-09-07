@@ -54,18 +54,18 @@ function ddb {
 
 # change to directory and list content
 function cl() {
-  cd "$1" && l
+	cd "$1" && l
 }
 
 # create directory and cd to it
 function mc() {
-  mkdir -p "$1"
-  cd "$1"
+	mkdir -p "$1"
+	cd "$1"
 }
 
-# cheat.sh output for command
+# cheat.sh
 function cheat() {
-  curl "cheat.sh/""$1"
+	curl "cheat.sh/""$1"
 }
 
 function cipssh() {
@@ -80,13 +80,13 @@ function cipssh() {
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/ioan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+	eval "$__conda_setup"
 else
-    if [ -f "/Users/ioan/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ioan/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/ioan/miniconda3/bin:$PATH"
-    fi
+	if [ -f "/Users/ioan/miniconda3/etc/profile.d/conda.sh" ]; then
+		. "/Users/ioan/miniconda3/etc/profile.d/conda.sh"
+	else
+		export PATH="/Users/ioan/miniconda3/bin:$PATH"
+	fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
