@@ -14,12 +14,10 @@ SAVEHIST=1000
 HISTFILE=$HOME/.histfile
 
 # aliases
-alias cav="conda activate"
 alias bubc="brew upgrade && brew cleanup"
 alias bubo="brew update && brew outdated"
 alias bubu="bubo && bubc"
 alias c="code"
-alias cdv="conda deactivate"
 alias cp="cp -irv"
 alias df="df -h"
 alias dv="deactivate"
@@ -27,7 +25,7 @@ alias emacs="emacs -nw"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias g="git"
-alias h="history -25"
+alias h="history -50"
 alias lab="jupyter-lab"
 alias l="ls -lahFG"
 alias mkdir="mkdir -pv"
@@ -47,10 +45,6 @@ alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 alias -- -="cd -"
-
-function ddb {
-	java -Djava.library.path=~/dynamodb_local_latest/DynamoDBLocal_lib -jar ~/dynamodb_local_latest/DynamoDBLocal.jar -sharedDb &
-}
 
 # change to directory and list content
 function cl() {
