@@ -38,6 +38,7 @@ alias rm="rm -v"
 alias _="sudo"
 alias t="tree -aC"
 alias top="htop"
+alias v="vim"
 
 alias ..="cd .."
 alias .2='cd ../../'

@@ -54,6 +54,7 @@ link:
 	ln -sf ${DOTFILES_DIR}/git/.gitconfig $(HOME)/.gitconfig
 	ln -sf ${DOTFILES_DIR}/git/.gitignore_global $(HOME)/.gitignore_global
 	ln -sf ${DOTFILES_DIR}/python/custom.css $(HOME)/.jupyter/custom/custom.css
+	ln -sf ${DOTFILES_DIR}/vim/.vimrc ${HOME}/.vimrc
 
 unlink:
 	unlink $(HOME)/.zshrc
@@ -61,6 +62,7 @@ unlink:
 	unlink $(HOME)/.gitconfig
 	unlink $(HOME)/.gitignore_global
 	unlink $(HOME)/.jupyter/custom/custom.css
+	unlink $(HOME)/.vimrc
 
 .PHONY: brew install_z
 
