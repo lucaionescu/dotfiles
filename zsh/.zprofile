@@ -3,4 +3,4 @@ export PATH
 
 export PATH="/Users/ioan/miniconda3/bin:$PATH"
 
-export EDITOR="emacs -nw"
+export EDITOR=vim

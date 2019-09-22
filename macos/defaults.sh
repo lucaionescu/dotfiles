@@ -36,6 +36,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 # Save screenshots as PNG
 defaults write com.apple.screencapture type -string "png"
 
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
 # Set plain text as default format in TextEdit
 defaults write com.apple.TextEdit RichText -int 0
 

@@ -14,6 +14,7 @@ SAVEHIST=1000
 HISTFILE=$HOME/.histfile
 
 # aliases
+alias b="bat"
 alias bubc="brew upgrade && brew cleanup"
 alias bubo="brew update && brew outdated"
 alias bubu="bubo && bubc"

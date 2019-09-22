@@ -16,7 +16,8 @@
 	di = diff
 	fe = fetch
 	forgot = commit --amend --no-edit
-	l = log --graph --abbrev-commit --decorate --date=short --format=format:'%C(red)%h%C(reset) - %C(blue)(%ai) %C(reset) %C(yellow)%s%C(reset) %C(yellow)- %an%C(reset)%C(red)%d%C(reset)' --all
+    l = log --graph --oneline --decorate
+	ll = log --graph --abbrev-commit --decorate --date=short --format=format:'%C(red)%h%C(reset) - %C(blue)(%ai) %C(reset) %C(yellow)%s%C(reset) %C(yellow)- %an%C(reset)%C(red)%d%C(reset)' --all
 	pl = pull
 	po = stash pop
 	ps = push
@@ -27,7 +28,7 @@
 	helper = cache
 
 [core]
-	editor = "emacs -nw"
+	editor = $EDITOR 
 	excludesfile = ~/.gitignore_global
 
 [help]

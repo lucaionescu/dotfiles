@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "omebrew/cask-fonts"
-tap "caskroom/cask"
+tap "caskroom/cask
+brew "bat"
 brew "git"
 brew "htop"
 brew "node"
