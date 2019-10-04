@@ -8,21 +8,23 @@
 [alias]
 	a = add
 	aa = add --all
-	br = branch
-	br = branch
-	ci = commit
+	b = branch
+    c = commit
+    cm = commit -m
+    cam = commit -a -m
+    ca = commit --amend
 	cl = clone
 	co = checkout
-	di = diff
-	fe = fetch
-	forgot = commit --amend --no-edit
+	d = diff
+	f = fetch 
     l = log --graph --oneline --decorate
 	ll = log --graph --abbrev-commit --decorate --date=short --format=format:'%C(red)%h%C(reset) - %C(blue)(%ai) %C(reset) %C(yellow)%s%C(reset) %C(yellow)- %an%C(reset)%C(red)%d%C(reset)' --all
-	pl = pull
+	p = pull
 	po = stash pop
 	ps = push
-	s = status
-	uncommit = reset --soft HEAD^
+    r = reset
+    rh = reset --hard
+	s = status -sb
 
 [credential]
 	helper = cache

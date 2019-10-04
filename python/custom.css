@@ -5,10 +5,15 @@ File has to be placed in ~/.jupyter/custom/custom.css
 
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
 
+.CodeMirror {
+  font-size: 11px;
+}
+
 .CodeMirror pre {
   font-family: 'Fira Code', monospace;
   font-size: 9pt;
 }
+
 
 div.output pre{
   font-family: 'Fira Code', monospace;

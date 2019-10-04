@@ -1,5 +1,7 @@
 . $HOME/z.sh
 
+export LC_ALL=en_US.UTF-8 
+
 autoload -Uz compinit && compinit
 
 # pure prompt
