@@ -1,0 +1,100 @@
+{
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+
+    "editor.renderWhitespace": "boundary",
+    "editor.scrollBeyondLastLine": false,
+    "editor.multiCursorModifier": "alt",
+    "editor.renderIndentGuides": true,
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "'FiraCode-Retina', 'Hack', 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.smoothScrolling": true,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.fontSize": 10,
+
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["-S"],
+    "python.pythonPath": "/Users/ioan/miniconda3/envs/dl-env/bin/python",
+    "python.dataScience.autoPreviewNotebooksInInteractivePane": true,
+    "python.dataScience.changeDirOnImportExport": false,
+    "python.formatting.autopep8Args": [
+        "--max-line-length=100"
+    ],
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.rulers": [
+            79
+        ],
+        "editor.defaultFormatter": "ms-python.python"
+    },
+
+    "[css]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[html]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[javascript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "[vue]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    "workbench.activityBar.visible": true,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.enableExperiments": false,
+
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    "debug.console.fontSize": 10,
+
+    "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
+
+    "extensions.ignoreRecommendations": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+
+    "search.useGlobalIgnoreFiles": true,
+
+    "breadcrumbs.enabled": false,
+
+    "window.title": "${activeEditorLong}",
+    "window.zoomLevel": -0.3,
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+
+    "terminal.integrated.fontSize": 10,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontFamily": "'FiraCode-Retina'",
+    "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.env.osx": {
+        "PATH": ""
+    },
+
+    "markdown.preview.fontSize": 11,
+
+    "vsicons.dontShowNewVersionMessage": true,
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+}
