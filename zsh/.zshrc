@@ -43,6 +43,9 @@ alias t="tree -aC"
 alias top="htop"
 alias v="vim"
 
+alias av="conda activate"
+alias dv="conda deactivate"
+
 alias ..="cd .."
 alias .2='cd ../../'
 alias .3='cd ../../../'

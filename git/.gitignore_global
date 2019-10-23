@@ -2,6 +2,10 @@
 \#*\#
 .localized
 
+# Vim
+*.swp
+*.swo
+
 # Created by https://www.gitignore.io/api/macos,python,jupyternotebook,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=macos,python,jupyternotebook,visualstudiocode
 
