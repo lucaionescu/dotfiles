@@ -11,8 +11,8 @@ prompt pure
 autoload -U colors && colors
 # PS1="%{$fg[yellow]%}%~/ %{$reset_color%}%"
 
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=$HOME/.histfile
 
 # aliases
@@ -28,7 +28,7 @@ alias emacs="emacs -nw"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias g="git"
-alias h="history -50"
+alias h="history -500"
 alias lab="jupyter-lab"
 alias l="ls -lahFG"
 alias mkdir="mkdir -pv"
