@@ -40,6 +40,8 @@ linux:
 	ln -sf ${DOTFILES_DIR}/manjaro/i3_config $(HOME)/.i3/config
 	ln -sf ${DOTFILES_DIR}/manjaro/.bashrc $(HOME)/.bashrc
 
+.PHONY: brew
+
 macos:
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	brew

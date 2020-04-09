@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -32,4 +33,6 @@ au Syntax * RainbowParenthesesLoadBraces
 
 set termguicolors
 colorscheme monokai_pro
+
+set updatetime=500
 
