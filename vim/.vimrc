@@ -20,5 +20,16 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'phanviet/vim-monokai-pro'
 
 call plug#end()
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+set termguicolors
+colorscheme monokai_pro
+

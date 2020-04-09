@@ -1,4 +1,4 @@
-  /*
+/*
 Custom CSS for Jupyter Notebooks.
 File has to be placed in ~/.jupyter/custom/custom.css
 */
@@ -46,5 +46,5 @@ div.tooltiptext pre{
 }
 
 .container {
-  width: 90% !important;
+  width: 70% !important;
 }
