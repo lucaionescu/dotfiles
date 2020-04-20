@@ -12,7 +12,7 @@ $ make
 
 The code for the installation script can be found [here](https://github.com/lucaionescu/dotfiles/blob/master/get_dotfiles.sh).
 
-### 🙏 Inspirations
+### 🙏 Credits/Similar repositories
  - https://github.com/rgomezcasas/dotfiles
  - https://github.com/rootbeersoup/dotfiles
  - https://github.com/masasam/dotfiles
