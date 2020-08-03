@@ -23,7 +23,6 @@
 	po = stash pop
 	ps = push
     r = reset
-    rh = reset --hard
 	s = status -sb
 
 [credential]

@@ -2,6 +2,7 @@ syntax on
 
 set autoindent
 set expandtab
+set hlsearch
 set noerrorbells
 set number
 set shiftwidth=4

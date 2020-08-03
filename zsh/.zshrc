@@ -1,6 +1,8 @@
 . $HOME/z.sh
 
-export LC_ALL=en_US.UTF-8 
+setopt GLOB_DOTS
+
+export LC_ALL=en_US.UTF-8
 
 autoload -Uz compinit && compinit
 
@@ -21,13 +23,16 @@ alias bubc="brew upgrade && brew cleanup"
 alias bubo="brew update && brew outdated"
 alias bubu="bubo && bubc"
 alias c="code"
+alias cl="clear"
 alias cp="cp -irv"
 alias df="df -h"
+alias dud="du -d 1 -h"
 alias dv="deactivate"
 alias emacs="emacs -nw"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias g="git"
+alias grep="grep --color"
 alias h="history -500"
 alias lab="jupyter-lab"
 alias l="ls -lahFG"
@@ -59,7 +64,7 @@ function cl() {
 }
 
 # create directory and cd to it
-function mc() {
+function mcd() {
 	mkdir -p "$1"
 	cd "$1"
 }
@@ -91,3 +96,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# added by travis gem
+[ -f /Users/ioan/.travis/travis.sh ] && source /Users/ioan/.travis/travis.sh
