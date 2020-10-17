@@ -1,6 +1,7 @@
 syntax on
 
 set autoindent
+set cursorline
 set expandtab
 set hlsearch
 set noerrorbells
@@ -11,6 +12,8 @@ set showmatch
 set softtabstop=4
 set tabstop=4
 
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -19,9 +22,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'fatih/vim-go'
+Plug 'xolox/vim-misc'
 
 call plug#end()
 
@@ -31,4 +34,6 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 set updatetime=500
+
+filetype plugin on
 
