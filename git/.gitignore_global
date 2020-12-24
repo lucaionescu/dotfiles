@@ -18,6 +18,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.nosync
 
 # Icon must end with two \r
 Icon

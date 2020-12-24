@@ -1,6 +1,7 @@
 syntax on
 
 set autoindent
+set autowrite
 set cursorline
 set expandtab
 set hlsearch
@@ -21,12 +22,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
+Plug 'sheerun/vim-polyglot'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'xolox/vim-misc'
-
 call plug#end()
+
+let g:python_highlight_all = 1
+
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
