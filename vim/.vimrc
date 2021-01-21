@@ -30,10 +30,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'luochen1990/rainbow'
 Plug 'arzg/vim-colors-xcode'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
 let g:python_highlight_all = 1
+
+let g:go_fmt_command = "goimports"
 
 let g:rainbow_active = 1
 
