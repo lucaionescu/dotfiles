@@ -5,15 +5,19 @@ set autowrite
 set cursorline
 set expandtab
 set hlsearch
+set list
 set noerrorbells
+set nocompatible
 set number
 set shiftwidth=4
 set showcmd
 set showmatch
 set softtabstop=4
 set tabstop=4
+set termguicolors
+set updatetime=500
 
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
+filetype plugin indent on
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -22,24 +26,16 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'sheerun/vim-polyglot'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'xolox/vim-misc'
+Plug 'luochen1990/rainbow'
+Plug 'arzg/vim-colors-xcode'
+
 call plug#end()
 
 let g:python_highlight_all = 1
 
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
+let g:rainbow_active = 1
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-set updatetime=500
-
-filetype plugin on
+colorscheme xcodedark
 
