@@ -2,34 +2,34 @@
 	email = lucaionescu@users.noreply.github.com
 	name = Luca Ionescu
 
-[github]
-	user = lucaionescu
-
 [alias]
 	a = add
 	aa = add --all
 	b = branch
-    c = commit
-    cm = commit -m
-    cam = commit -a -m
-    ca = commit --amend
+	cm = commit
+	caa = commit --all --amend --no-edit
+	cam = commit --all -m
 	cl = clone
 	co = checkout
 	d = diff
-	f = fetch 
-    l = log --graph --oneline --decorate
+	dw = diff --word-diff
+	f = fetch
+	l = log --graph --oneline --decorate
 	ll = log --graph --abbrev-commit --decorate --date=short --format=format:'%C(red)%h%C(reset) - %C(blue)(%ai) %C(reset) %C(yellow)%s%C(reset) %C(yellow)- %an%C(reset)%C(red)%d%C(reset)' --all
 	pl = pull
-	po = stash pop
 	ps = push
-    r = reset
+	r = reset
+	re = remote -v
 	s = status -sb
+	sl = stash list
+	spo = stash pop
+	spu = stash push
 
 [credential]
 	helper = cache
 
 [core]
-	editor = $EDITOR 
+	editor = "/usr/bin/vim"
 	excludesfile = ~/.gitignore_global
 
 [help]
@@ -37,3 +37,9 @@
 
 [color]
 	ui = auto
+
+[grep]
+	lineNumber = true
+
+[github]
+	user = lucaionescu
