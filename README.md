@@ -1,7 +1,7 @@
-## 💻 Dotfiles
+# Dotfiles
 Dotfiles repository for my macOS setup.
 
-### 🔑 Installation
+## Installation
 Either clone this repository manually and install by using `make` or download the [installation script](https://github.com/lucaionescu/dotfiles/blob/master/get_dotfiles.sh) by using `curl`:
 
 ```bash
@@ -10,7 +10,7 @@ $ cd ~/dotfiles
 $ make
 ```
 
-### 🙏 Credits/Similar repositories
+## Credits/Similar repositories
  - https://github.com/rgomezcasas/dotfiles
  - https://github.com/rootbeersoup/dotfiles
  - https://github.com/masasam/dotfiles
