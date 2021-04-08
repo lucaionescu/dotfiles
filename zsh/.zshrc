@@ -40,7 +40,8 @@ alias v="vim"
 
 # python
 alias p="python3"
-alias av="conda activate"
+alias cav="conda activate"
+alias cdv="conda deactivate"
 alias dv="deactivate"
 alias nb="jupyter-notebook"
 alias lab="jupyter-lab"
