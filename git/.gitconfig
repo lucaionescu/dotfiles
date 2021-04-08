@@ -6,7 +6,7 @@
 	a = add
 	aa = add --all
 	b = branch
-	cm = commit
+	cm = commit -m
 	caa = commit --all --amend --no-edit
 	cam = commit --all -m
 	cl = clone
