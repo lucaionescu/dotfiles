@@ -2,10 +2,10 @@
 Dotfiles repository for my macOS setup.
 
 ## Installation
-Either clone this repository manually and install by using `make` or download the [installation script](https://github.com/lucaionescu/dotfiles/blob/master/get_dotfiles.sh) by using `curl`:
+Either clone this repository manually and install by using `make` or download the [installation script](https://github.com/lucaionescu/dotfiles/blob/master/install.sh) by using `curl`:
 
 ```bash
-$ curl -fsSl https://raw.githubusercontent.com/lucaionescu/dotfiles/master/get_dotfiles.sh | sh
+$ curl -fsSl https://raw.githubusercontent.com/lucaionescu/dotfiles/master/install.sh | sh
 $ cd ~/dotfiles
 $ make
 ```
