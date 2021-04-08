@@ -69,11 +69,6 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# Remove Dropbox's green checkmarks in Finder
-# file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-# [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
-# unset file
-
 ### Safari ###
 
 # Privacy: don’t send search queries to Apple

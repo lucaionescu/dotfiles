@@ -1,10 +1,8 @@
 tap "homebrew/bundle"
-tap "omebrew/cask-fonts"
 tap "caskroom/cask
 brew "bat"
 brew "git"
 brew "htop"
 brew "node"
 brew "tree"
-brew "font-fira-code"
 brew "visual-studio-code"
