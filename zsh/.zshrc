@@ -1,5 +1,3 @@
-. $HOME/z.sh
-
 setopt GLOB_DOTS
 
 export LC_ALL=en_US.UTF-8
