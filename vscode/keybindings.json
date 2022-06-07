@@ -1,96 +1,200 @@
-// Place your key bindings in this file to overwrite the defaults
 [
-	{
-		"key": "cmd+[Equal]",
-		"command": "workbench.action.terminal.toggleTerminal"
+    {
+        "key": "cmd+[Equal]",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+[Equal]",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "cmd+m cmd+t",
+        "command": "-latex-workshop.shortcut.mathtt",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+m cmd+s",
+        "command": "-latex-workshop.shortcut.mathsf",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+m cmd+r",
+        "command": "-latex-workshop.shortcut.mathrm",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+m cmd+i",
+        "command": "-latex-workshop.shortcut.mathit",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+m cmd+b",
+        "command": "-latex-workshop.shortcut.mathbf",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+m shift+cmd+b",
+        "command": "-latex-workshop.shortcut.mathbb",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+m cmd+c",
+        "command": "-latex-workshop.shorcut.mathcal",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "cmd+0",
+        "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "shift+cmd+0",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+numpad0",
+        "command": "-workbench.action.zoomReset"
+    },
+    {
+        "key": "cmd+[BracketRight]",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+numpad_add",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "cmd+numpad_subtract",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "shift+cmd+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "references-view.find",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.find",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "processing.RunTaskFile"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "-workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "-workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.action.openEditorAtIndex5"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "-workbench.action.openEditorAtIndex5"
 	},
 	{
-		"key": "ctrl+shift+[Equal]",
-		"command": "-workbench.action.terminal.toggleTerminal"
+		"key": "shift+cmd+g",
+		"command": "-editor.action.previousMatchFindAction",
+		"when": "editorFocus"
 	},
 	{
-		"key": "cmd+r",
-		"command": "workbench.action.openRecent"
+		"key": "shift+cmd+g",
+		"command": "-workbench.action.terminal.findPrevious",
+		"when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
 	},
 	{
-		"key": "ctrl+r",
-		"command": "-workbench.action.openRecent"
+		"key": "shift+cmd+g",
+		"command": "workbench.view.scm"
 	},
 	{
-		"key": "cmd+m cmd+t",
-		"command": "-latex-workshop.shortcut.mathtt",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+		"key": "ctrl+shift+g",
+		"command": "-workbench.view.scm"
 	},
 	{
-		"key": "cmd+m cmd+s",
-		"command": "-latex-workshop.shortcut.mathsf",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+		"key": "tab",
+		"command": "-acceptSelectedSuggestion",
+		"when": "suggestWidgetVisible && textInputFocus"
 	},
 	{
-		"key": "cmd+m cmd+r",
-		"command": "-latex-workshop.shortcut.mathrm",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+		"key": "cmd+e",
+		"command": "-actions.findWithSelection"
 	},
 	{
-		"key": "cmd+m cmd+i",
-		"command": "-latex-workshop.shortcut.mathit",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
-	},
-	{
-		"key": "cmd+m cmd+b",
-		"command": "-latex-workshop.shortcut.mathbf",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
-	},
-	{
-		"key": "cmd+m shift+cmd+b",
-		"command": "-latex-workshop.shortcut.mathbb",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
-	},
-	{
-		"key": "cmd+m cmd+c",
-		"command": "-latex-workshop.shorcut.mathcal",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
-	},
-	{
-		"key": "cmd+0",
-		"command": "-workbench.action.focusSideBar"
-	},
-	{
-		"key": "shift+cmd+0",
-		"command": "-workbench.action.zoomIn"
-	},
-	{
-		"key": "cmd+numpad0",
-		"command": "-workbench.action.zoomReset"
-	},
-	{
-		"key": "cmd+[BracketRight]",
-		"command": "-workbench.action.zoomIn"
-	},
-	{
-		"key": "cmd+numpad_add",
-		"command": "-workbench.action.zoomIn"
-	},
-	{
-		"key": "cmd+-",
-		"command": "-workbench.action.zoomOut"
-	},
-	{
-		"key": "cmd+numpad_subtract",
-		"command": "-workbench.action.zoomOut"
-	},
-	{
-		"key": "shift+cmd+-",
-		"command": "-workbench.action.zoomOut"
-	},
-	{
-		"key": "shift+cmd+r",
-		"command": "references-view.find",
-		"when": "editorHasReferenceProvider"
-	},
-	{
-		"key": "shift+alt+f12",
-		"command": "-references-view.find",
-		"when": "editorHasReferenceProvider"
+		"key": "cmd+e",
+		"command": "clojureVSCode.evalAndShowResult"
 	}
 ]

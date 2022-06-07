@@ -1,100 +1,149 @@
 {
-    "files.autoSave": "onFocusChange",
-    "files.trimTrailingWhitespace": true,
-
-    "editor.renderWhitespace": "boundary",
-    "editor.scrollBeyondLastLine": false,
-    "editor.multiCursorModifier": "alt",
-    "editor.renderIndentGuides": true,
-    "editor.wordWrap": "on",
-    "editor.fontFamily": "'FiraCode-Retina', 'Hack', 'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
-    "editor.smoothScrolling": true,
-    "editor.detectIndentation": false,
-    "editor.insertSpaces": false,
-    "editor.suggestSelection": "recentlyUsed",
-    "editor.minimap.enabled": false,
-    "editor.renderControlCharacters": false,
-    "editor.fontSize": 10,
-
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": ["-S"],
-    "python.pythonPath": "/Users/ioan/miniconda3/envs/dl-env/bin/python",
-    "python.dataScience.autoPreviewNotebooksInInteractivePane": true,
-    "python.dataScience.changeDirOnImportExport": false,
-    "python.formatting.autopep8Args": [
-        "--max-line-length=100"
-    ],
-    "[python]": {
-        "editor.insertSpaces": true,
-        "editor.rulers": [
-            79
-        ],
-        "editor.defaultFormatter": "ms-python.python"
-    },
-
-    "[css]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-
-    "[html]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-
-    "[javascript]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-
-    "[vue]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-
-    "workbench.activityBar.visible": true,
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Monokai Pro",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.enableExperiments": false,
-
-    "diffEditor.ignoreTrimWhitespace": true,
-
-    "debug.console.fontSize": 10,
-
-    "explorer.confirmDragAndDrop": false,
-    "explorer.openEditors.visible": 0,
-
-    "extensions.ignoreRecommendations": true,
-    "extensions.showRecommendationsOnlyOnDemand": true,
-
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-
-    "search.useGlobalIgnoreFiles": true,
-
-    "breadcrumbs.enabled": false,
-
-    "window.title": "${activeEditorLong}",
-    "window.zoomLevel": -0.3,
-
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
-
-    "terminal.integrated.fontSize": 10,
-    "terminal.explorerKind": "external",
-    "terminal.integrated.fontFamily": "'FiraCode-Retina'",
-    "terminal.integrated.rendererType": "dom",
-    "terminal.integrated.env.osx": {
-        "PATH": ""
-    },
-
-    "markdown.preview.fontSize": 11,
-
-    "vsicons.dontShowNewVersionMessage": true,
-
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+	"files.autoSave": "onFocusChange",
+	"files.trimTrailingWhitespace": true,
+	"editor.smoothScrolling": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.columnSelection": false,
+	"editor.renderWhitespace": "boundary",
+	"editor.scrollBeyondLastLine": false,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.fontFamily": "'JetBrains Mono', monospace",
+	"editor.fontLigatures": true,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.suggestSelection": "first",
+	"editor.minimap.enabled": false,
+	"editor.renderControlCharacters": false,
+	"editor.accessibilitySupport": "off",
+	"python.languageServer": "Pylance",
+	"python.linting.enabled": false,
+	"python.defaultInterpreterPath": "/Users/ioan/miniforge3/bin/python",
+	"python.formatting.blackArgs": [
+		"-S",
+		"-l 100"
+	],
+	"python.formatting.autopep8Args": [
+		"--max-line-length=120"
+	],
+	"[sql]": {
+		"editor.wordWrap": "off"
+	},
+	"[python]": {
+		"editor.insertSpaces": true,
+		// "editor.defaultFormatter": "ms-python.python",
+		"editor.rulers": [
+			120
+		],
+	},
+	"[css]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[scss]": {
+		"editor.insertSpaces": true,
+			"editor.tabSize": 2
+	},
+	"[html]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[.tf]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[pde]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+	},
+	"[csv]": {
+		"editor.wordWrap": "off",
+	},
+	"[clojure]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+	},
+	"[.cs]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+	},
+	"[terraform]": {
+		"editor.formatOnSave": true
+	},
+	"workbench.startupEditor": "none",
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	"workbench.enableExperiments": false,
+	"workbench.tips.enabled": false,
+	"workbench.view.alwaysShowHeaderActions": true,
+	"workbench.list.smoothScrolling": true,
+	"workbench.statusBar.visible": true,
+	"workbench.editor.untitled.hint": "hidden",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter-notebook"
+	},
+	"diffEditor.ignoreTrimWhitespace": false,
+	"debug.console.fontSize": 10,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.openEditors.visible": 0,
+	"extensions.ignoreRecommendations": true,
+	"extensions.autoUpdate": "onlyEnabledExtensions",
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"window.title": "${activeEditorLong}",
+	"terminal.explorerKind": "external",
+	"terminal.integrated.env.osx": {
+		"PATH": ""
+	},
+	"markdown.preview.fontSize": 12,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"security.workspace.trust.enabled": false,
+	"files.associations": {
+		"*.pyde": "python",
+		"*.pde": "pde"
+	},
+	"files.exclude": {
+		"**/__pycache__/**": true,
+		"**/.classpath": true,
+		"**/.factorypath": true,
+		"**/.git/objects/**": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/node_modules/**": true,
+		"**/tmp/**": true
+	},
+	"files.watcherExclude": {
+		"**/.git/**": true,
+		"**/.git/objects/**": false,
+		"**/.git/subtree-cache/**": false,
+		"**/dist/**": true,
+		"**/node_modules/**": true,
+		"**/tmp/**": true,
+		"**/venv/**": true,
+		"**/__pycache__/**": true,
+	},
+	"search.useGlobalIgnoreFiles": true,
+	"search.followSymlinks": false,
+	"search.exclude": {
+		"**/__pycache__/**": true,
+		"**/.git/**": true,
+		"**/dist/**": true,
+		"**/node_modules/**": true,
+		"**/package-lock.json": true,
+		"**/tmp/**": true,
+		"**/venv/**": true
+	},
+	"clojureVSCode.formatOnSave": true,
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "left"
+	},
+	"color-highlight.markRuler": false,
+	"update.mode": "start",
+	"workbench.colorTheme": "GitHub Dark Dimmed",
+	"terminal.integrated.inheritEnv": false,
+	"terminal.integrated.fontFamily": "'JetBrains Mono'",
+	"editor.fontSize": 11,
 }
