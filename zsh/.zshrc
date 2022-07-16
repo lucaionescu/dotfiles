@@ -8,6 +8,9 @@ autoload -U colors && colors
 autoload -U promptinit; promptinit  # pure prompt
 prompt pure
 
+obindkey -v
+export KEYTIMEOUT=1
+
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=$HOME/.histfile
