@@ -1,6 +1,0 @@
-/* make the columns default to 600px wide */
-
-.is-wide-columns .column {
-    width: 500px !important;
-}
-

@@ -8,7 +8,7 @@ set hlsearch
 set list
 set noerrorbells
 set nocompatible
-set number
+set relativenumber
 set showcmd
 set showmatch
 set softtabstop=4
@@ -33,4 +33,3 @@ call plug#end()
 let g:python_highlight_all = 1
 
 let g:rainbow_active = 1
-
