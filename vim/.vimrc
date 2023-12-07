@@ -8,6 +8,7 @@ set hlsearch
 set list
 set noerrorbells
 set nocompatible
+set nolist
 set relativenumber
 set showcmd
 set showmatch
@@ -27,9 +28,8 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'luochen1990/rainbow'
-Plug 'sheerun/vimrc'
 call plug#end()
 
 let g:python_highlight_all = 1
-
 let g:rainbow_active = 1
+
