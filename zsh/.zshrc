@@ -1,56 +1,48 @@
-setopt GLOB_DOTS
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export LC_ALL=en_US.UTF-8
+fpath+=/opt/homebrew/share/zsh/site-functions
 
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 
-autoload -U promptinit; promptinit  # pure prompt
+# https://github.com/sindresorhus/pure
+autoload -U promptinit; promptinit
+PURE_PROMPT_SYMBOL="->"
 prompt pure
 
-obindkey -v
-export KEYTIMEOUT=1
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=$HOME/.histfile
+export KEYTIMEOUT=1
+export FFMPEG_PATH=$(which ffmpeg)
 
 # aliases
 alias _="sudo"
-alias b="bat"
-alias c="code"
+alias b="bat --theme=Nord"
+alias chat="cheat"
+alias c="code ."
 alias cl="clear"
 alias cp="cp -irv"
 alias df="df -h"
 alias dud="du -d 1 -h"
-alias emacs="emacs -nw"
-alias fd="find . -type d -name"
-alias ff="find . -type f -name"
 alias g="git"
 alias grep="grep --color"
 alias h="history -500"
 alias l="ls -lahFG"
+alias lsd='ls -dlahG */' # list only directorries
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
 alias o="open"
+alias oo="open ."
+alias p="python3"
 alias reload="source ~/.zshrc"
 alias rm="rm -v"
-alias t="tree -aC"
-alias top="htop"
-alias v="vim"
+alias v="nvim"
 
-# python
-alias p="python3"
-alias cav="conda activate"
-alias cdv="conda deactivate"
-alias dv="deactivate"
-alias nb="jupyter-notebook"
-alias lab="jupyter-lab"
+alias ..l="cd .. && l"
 
-# brew
-alias bubc="brew upgrade && brew cleanup"
-alias bubo="brew update && brew outdated"
-alias bubu="bubo && bubc"
+# processing-py
+alias ppy="java -jar ~/generative/processing-py/processing.py-3017-macosx/processing-py.jar"
 
 # jumping around
 alias ..="cd .."
@@ -59,6 +51,9 @@ alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 alias -- -="cd -"
+
+# colorize man pages with bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p --theme=Nord'"
 
 # create directory and cd to it
 function mcd() {
@@ -71,28 +66,26 @@ function cheat() {
 	curl "cheat.sh/""$1"
 }
 
-function cipssh() {
-	if [ "$1" = "" ]; then
-		ssh ionescu@remote.cip.ifi.lmu.de
-	else
-		ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
-	fi
+ function cipssh() {
+if [ "$1" = "" ]; then
+    ssh ionescu@remote.cip.ifi.lmu.de
+else
+    ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
+fi
 }
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/ioan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/ioan/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-	eval "$__conda_setup"
+    eval "$__conda_setup"
 else
-	if [ -f "/Users/ioan/miniconda3/etc/profile.d/conda.sh" ]; then
-		. "/Users/ioan/miniconda3/etc/profile.d/conda.sh"
-	else
-		export PATH="/Users/ioan/miniconda3/bin:$PATH"
-	fi
+    if [ -f "/Users/ioan/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ioan/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/ioan/miniforge3/bin:$PATH"
+    fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# added by travis gem
-[ -f /Users/ioan/.travis/travis.sh ] && source /Users/ioan/.travis/travis.sh
