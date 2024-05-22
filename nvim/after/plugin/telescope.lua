@@ -4,6 +4,15 @@ local fb_actions = require('telescope._extensions.file_browser.actions')
 
 
 telescope.setup {
+    defaults = {
+        preview = {
+            treesitter = false
+        },
+        file_ignore_patterns = {
+            '.git/',
+            'node_modules/',
+        }
+    },
     extensions = {
         file_browser = {
             dir_icon = '',
@@ -36,6 +45,6 @@ vim.keymap.set('n', '<leader>ff', builtin.current_buffer_fuzzy_find, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fo', builtin.oldfiles, {})
-vim.keymap.set('n', '<leader>fp', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fp', builtin.git_files, {})
 vim.keymap.set('n', '<leader>fs', builtin.colorscheme, {})
 

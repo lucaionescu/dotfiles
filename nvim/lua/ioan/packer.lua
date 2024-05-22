@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
 
   -- use('jose-elias-alvarez/null-ls.nvim')
 
-  use('HiPhish/rainbow-delimiters.nvim')
+  -- use('HiPhish/rainbow-delimiters.nvim')
 
   use('windwp/nvim-autopairs')
 
