@@ -1,4 +1,5 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -12,6 +13,8 @@ vim.opt.smartindent = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 

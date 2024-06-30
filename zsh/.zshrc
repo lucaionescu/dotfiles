@@ -16,6 +16,15 @@ bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
 export FFMPEG_PATH=$(which ffmpeg)
 
+HISTORY_IGNORE="(ls|cd|pwd|exit)"
+setopt SHARE_HISTORY         # Share history between all sessions.
+setopt HIST_IGNORE_SPACE     # Do not record an event starting with a space.
+setopt EXTENDED_HISTORY      # Write the history file in the ':start:elapsed;command' format.
+setopt HIST_IGNORE_DUPS      # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS  # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_SAVE_NO_DUPS     # Do not write a duplicate event to the history file.
+setopt HIST_NO_STORE         # Don't store history commands
+
 # aliases
 alias _="sudo"
 alias b="bat --theme=Nord"
@@ -29,7 +38,6 @@ alias g="git"
 alias grep="grep --color"
 alias h="history -500"
 alias l="ls -lahFG"
-alias lsd='ls -dlahG */' # list only directorries
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
 alias o="open"
@@ -39,7 +47,9 @@ alias reload="source ~/.zshrc"
 alias rm="rm -v"
 alias v="nvim"
 
-alias ..l="cd .. && l"
+# docker
+alias dc="docker container"
+alias di="docker image"
 
 # processing-py
 alias ppy="java -jar ~/generative/processing-py/processing.py-3017-macosx/processing-py.jar"
@@ -64,14 +74,6 @@ function mcd() {
 # cheat.sh
 function cheat() {
 	curl "cheat.sh/""$1"
-}
-
- function cipssh() {
-if [ "$1" = "" ]; then
-    ssh ionescu@remote.cip.ifi.lmu.de
-else
-    ssh -X -o 'ProxyCommand ssh -W %h:%p ionescu@remote.cip.ifi.lmu.de' ionescu@"$1"
-fi
 }
 
 # >>> conda initialize >>>
