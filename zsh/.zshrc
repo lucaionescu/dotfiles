@@ -36,7 +36,7 @@ alias df="df -h"
 alias dud="du -d 1 -h"
 alias g="git"
 alias grep="grep --color"
-alias h="history -500"
+alias h="history"
 alias l="ls -lahFG"
 alias mkdir="mkdir -pv"
 alias mv="mv -v"
@@ -46,6 +46,10 @@ alias p="python3"
 alias reload="source ~/.zshrc"
 alias rm="rm -v"
 alias v="nvim"
+
+# tmux
+alias tm="tmux"
+alias tmn="tmux new-session -t"
 
 # docker
 alias dc="docker container"
