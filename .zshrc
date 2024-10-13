@@ -16,7 +16,14 @@ bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
 export FFMPEG_PATH=$(which ffmpeg)
 
+if [ -e $HOMEBREW_PREFIX/etc/profile.d/z.sh ]; then
+  source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+fi
+
 HISTORY_IGNORE="(ls|cd|pwd|exit)"
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 setopt SHARE_HISTORY         # Share history between all sessions.
 setopt HIST_IGNORE_SPACE     # Do not record an event starting with a space.
 setopt EXTENDED_HISTORY      # Write the history file in the ':start:elapsed;command' format.
@@ -55,15 +62,18 @@ alias tmn="tmux new-session -t"
 alias dc="docker container"
 alias di="docker image"
 
+# second-brain
+alias brain="tmux new-session -c ~/Library/Mobile\ Documents/iCloud~md~Obsidian/Documents/second-brain -t second-brain"
+
 # processing-py
 alias ppy="java -jar ~/generative/processing-py/processing.py-3017-macosx/processing-py.jar"
 
 # jumping around
 alias ..="cd .."
-alias .2='cd ../../'
-alias .3='cd ../../../'
-alias .4='cd ../../../../'
-alias .5='cd ../../../../..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../..'
 alias -- -="cd -"
 
 # colorize man pages with bat
