@@ -51,8 +51,6 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-### Finder ###
-
 # Disable Quick Look animation
 defaults write -g QLPanelAnimationDuration -float 0
 
@@ -68,8 +66,6 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
-
-### Safari ###
 
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -94,6 +90,12 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # Enable “Do Not Track”
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+# Enable key repeat for Cursor
+defaults write -app Cursor ApplePressAndHoldEnabled -bool false
+
+# Lower the keyboard repeat rate
+defaults write -g KeyRepeat -int 1
 
 killall Dock
 killall Finder
