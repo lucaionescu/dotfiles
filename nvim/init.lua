@@ -58,7 +58,7 @@ vim.keymap.set("n", "n", "nzzzv", opts)
 vim.keymap.set("n", "N", "Nzzzv", opts)
 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
@@ -67,6 +67,14 @@ vim.keymap.set("n", "<c-w>b", ":split<CR>")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("c", "W", "w", opts)
+
+vim.keymap.set("n", "tt", ":tabedit<CR>", opts)
+
+vim.keymap.set("n", ">", ">>", opts)
+vim.keymap.set("n", "<", "<<", opts)
+
+vim.keymap.set("n", ">", ">>", opts)
+vim.keymap.set("n", "<", "<<", opts)
 
 -- resize windows
 vim.keymap.set("n", "<up>", ":resize -5<CR>")

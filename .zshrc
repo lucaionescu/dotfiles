@@ -62,12 +62,6 @@ alias tmn="tmux new-session -t"
 alias dc="docker container"
 alias di="docker image"
 
-# second-brain
-alias brain="tmux new-session -c ~/Library/Mobile\ Documents/iCloud~md~Obsidian/Documents/second-brain -t second-brain"
-
-# processing-py
-alias ppy="java -jar ~/generative/processing-py/processing.py-3017-macosx/processing-py.jar"
-
 # jumping around
 alias ..="cd .."
 alias ...='cd ../../'
@@ -108,3 +102,6 @@ unset __conda_setup
 
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
+
+source <(fzf --zsh)
+
