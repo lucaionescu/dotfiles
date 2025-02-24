@@ -6,7 +6,9 @@
 	a = add
 	aa = add --all
 	b = branch
+	c = commit
 	cm = commit -m
+	cv = commit -v
 	cam = commit --all -m
 	cane = commit --amend --no-edit
 	cl = clone
@@ -27,7 +29,7 @@
 	spu = stash push
 
 [credential]
-	helper = cache
+    helper = cache
 
 [core]
 	editor = "/usr/bin/vim"
@@ -53,3 +55,34 @@
 
 [init]
 	defaultBranch = main
+
+[commit]
+    verbose = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+[pull]
+    rebase = true
