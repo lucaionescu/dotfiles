@@ -104,29 +104,18 @@ require('packer').startup(function(use)
 
   use('projekt0n/github-nvim-theme')
 
-  use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v3.x',
-      requires = {
-          --- Uncomment these if you want to manage the language servers from neovim
-          {'williamboman/mason.nvim'},
-          {'williamboman/mason-lspconfig.nvim'},
-
-          -- LSP Support
-          {'neovim/nvim-lspconfig'},
-
-          -- Autocompletion
-          {'hrsh7th/nvim-cmp'},
-          {'hrsh7th/cmp-nvim-lsp'},
-          {'L3MON4D3/LuaSnip'},
-      }
-  }
-
   use('windwp/nvim-autopairs')
 
   use('mbbill/undotree')
 
   use('norcalli/nvim-colorizer.lua')
+
+  use('neovim/nvim-lspconfig')
+  use('williamboman/mason.nvim')
+  use('williamboman/mason-lspconfig.nvim')
+  use('neovim/nvim-lspconfig')
+  use('hrsh7th/nvim-cmp')
+  use('hrsh7th/cmp-nvim-lsp')
 
   use('Olical/conjure')
 end)
