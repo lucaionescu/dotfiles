@@ -27,7 +27,7 @@ vim.opt.updatetime = 50
 
 vim.opt.cursorline = true
 
-vim.cmd.colorscheme('github_dark_dimmed')
+vim.cmd.colorscheme('lunaperche')
 vim.cmd.language('en_US')
 
 vim.opt.swapfile = false
@@ -36,7 +36,7 @@ vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
 vim.opt.undofile = true
 
 vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldlevelstart = 99
 
 vim.opt.laststatus = 3
@@ -67,8 +67,6 @@ vim.keymap.set("n", "<c-w>b", ":split<CR>")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("c", "W", "w", opts)
-
-vim.keymap.set("n", "tt", ":tabedit<CR>", opts)
 
 vim.keymap.set("n", ">", ">>", opts)
 vim.keymap.set("n", "<", "<<", opts)
@@ -102,8 +100,6 @@ require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
-  use('projekt0n/github-nvim-theme')
-
   use('windwp/nvim-autopairs')
 
   use('mbbill/undotree')
@@ -111,12 +107,15 @@ require('packer').startup(function(use)
   use('norcalli/nvim-colorizer.lua')
 
   use('neovim/nvim-lspconfig')
+
   use('williamboman/mason.nvim')
   use('williamboman/mason-lspconfig.nvim')
-  use('neovim/nvim-lspconfig')
+
   use('hrsh7th/nvim-cmp')
   use('hrsh7th/cmp-nvim-lsp')
 
-  use('Olical/conjure')
+  -- use('Olical/conjure')
+
+  use('folke/flash.nvim')
 end)
 

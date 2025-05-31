@@ -54,6 +54,8 @@ alias reload="source ~/.zshrc"
 alias rm="rm -v"
 alias v="nvim"
 
+alias chrome="/Applications/Google\ Chrome\ Dev.app/Contents/MacOS/Google\ Chrome\ Dev --headless"
+
 # tmux
 alias tm="tmux"
 alias tmn="tmux new-session -t"
@@ -105,3 +107,8 @@ eval "$(uv generate-shell-completion zsh)"
 
 source <(fzf --zsh)
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ioan/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
