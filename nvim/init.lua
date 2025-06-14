@@ -114,7 +114,7 @@ require('packer').startup(function(use)
   use('hrsh7th/nvim-cmp')
   use('hrsh7th/cmp-nvim-lsp')
 
-  -- use('Olical/conjure')
+  use('Olical/conjure')
 
   use('folke/flash.nvim')
 end)

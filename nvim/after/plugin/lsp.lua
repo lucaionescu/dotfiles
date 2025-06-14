@@ -8,6 +8,8 @@ require('lspconfig').ruff.setup({})
 require('cmp').setup({})
 require('cmp_nvim_lsp').setup({})
 
+require('lspconfig').clojure_lsp.setup({})
+
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
