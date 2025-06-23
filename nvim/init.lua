@@ -74,6 +74,10 @@ vim.keymap.set("n", "<", "<<", opts)
 vim.keymap.set("n", ">", ">>", opts)
 vim.keymap.set("n", "<", "<<", opts)
 
+vim.keymap.set("n", "<leader>ve", "<cmd>edit ~/dotfiles/nvim/init.lua<cr>", { desc = "Edit vimrc" })
+vim.keymap.set("n", "<leader>vr", "<cmd>source ~/dotfiles/nvim/init.lua<cr>", { desc = "Reload vimrc" })
+vim.keymap.set("n", "<leader>te", "<cmd>edit ~/.tmux.conf<cr>", { desc = "Edit tmux config" })
+
 -- resize windows
 vim.keymap.set("n", "<up>", ":resize -5<CR>")
 vim.keymap.set("n", "<down>", ":resize +5<CR>")
