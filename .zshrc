@@ -2,6 +2,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 fpath+=/opt/homebrew/share/zsh/site-functions
 
+if [ -e $HOMEBREW_PREFIX/etc/profile.d/z.sh ]; then
+  source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+fi
+
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 
@@ -15,10 +19,6 @@ bindkey '^R' history-incremental-search-backward
 
 export KEYTIMEOUT=1
 export FFMPEG_PATH=$(which ffmpeg)
-
-if [ -e $HOMEBREW_PREFIX/etc/profile.d/z.sh ]; then
-  source $HOMEBREW_PREFIX/etc/profile.d/z.sh
-fi
 
 HISTORY_IGNORE="(ls|cd|pwd|exit)"
 export HISTFILE=$HOME/.zsh_history
@@ -36,7 +36,6 @@ setopt HIST_NO_STORE         # Don't store history commands
 alias _="sudo"
 alias b="bat --theme=Nord"
 alias chat="cheat"
-alias c="code ."
 alias cl="clear"
 alias cp="cp -irv"
 alias df="df -h"
@@ -85,22 +84,6 @@ function mcd() {
 function cheat() {
 	curl "cheat.sh/""$1"
 }
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/ioan/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/ioan/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ioan/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/ioan/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 . "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"

@@ -102,8 +102,6 @@ require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  use('tpope/vim-fugitive')
-
   use('windwp/nvim-autopairs')
 
   use('mbbill/undotree')
@@ -114,9 +112,6 @@ require('packer').startup(function(use)
 
   use('williamboman/mason.nvim')
   use('williamboman/mason-lspconfig.nvim')
-
-  use('hrsh7th/nvim-cmp')
-  use('hrsh7th/cmp-nvim-lsp')
 
   use('Olical/conjure')
 
